@@ -8,8 +8,8 @@ import { api } from "@/lib/api";
 import { AudioPlayer } from "../audio/audio-player";
 import { TimelineTrack } from "../ui/timeline-track";
 import { TimelineCard } from "../ui/timeline-card";
+import { ProfileCard } from "../ui/profile-card"; // Importamos o novo componente
 import { ASSETS } from "@/constants/media";
-import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -40,7 +40,6 @@ export function FittipaldiSection() {
     }
 
     fetchStats();
-
     return () => { isMounted = false; };
   }, []);
 
@@ -101,40 +100,18 @@ export function FittipaldiSection() {
       />
       <div className="relative z-10 max-w-350 mx-auto px-6 pt-20">
         <TimelineTrack />
-        <div className="relative flex w-full justify-between items-center pl-16 md:pl-0 timeline-card md:mb-40 mb-24">
-          <div className="card-reveal hidden md:block absolute left-[calc(50%-10px)] top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-4 border-[#f2f2f2] bg-white shadow-[0_0_20px_rgba(255,255,255,0.8)] z-10 card-dot" />
-          <div className="card-reveal hidden md:block w-[45%] h-100 lg:h-125 relative rounded-3xl overflow-hidden shadow-2xl card-image md:order-1" style={{ filter: 'grayscale(100%)' }}>
-            <Image
-              src={ASSETS.FITTIPALDI.PROFILE}
-              alt="Emerson Fittipaldi Perfil"
-              fill
-              sizes="(max-width: 1024px) 50vw, 1000px"
-              priority={true}
-              className="object-cover object-top transition-transform duration-700 hover:scale-105"
-            />
-          </div>
 
-          <div className="w-full md:w-[45%] bg-white/60 backdrop-blur-xl p-8 lg:p-12 rounded-3xl border border-zinc-200 group card-content md:order-2 flex flex-col justify-center">
-            <span className="card-reveal inline-block text-zinc-900 text-[10px] font-bold tracking-widest uppercase mb-4">O Pioneiro</span>
-
-            <h2 className="card-reveal text-5xl md:text-6xl lg:text-7xl font-bold uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-yellow-500 leading-[0.9] drop-shadow-sm">
-              EMERSON<br />FITTIPALDI
-            </h2>
-
-            <p className="card-reveal text-zinc-500 mt-4 font-cursive text-3xl lg:text-4xl">"{t('fittipaldi.nickname')}"</p>
-
-            <div className="card-reveal flex gap-4 lg:gap-6 mt-10 w-full">
-              <div className="flex-1 bg-white/80 backdrop-blur-md px-2 py-4 lg:py-6 rounded-2xl border border-zinc-200 shadow-sm flex flex-col items-center justify-center transition-colors hover:border-green-400/50">
-                <span className="block text-4xl lg:text-5xl font-bold text-zinc-900">{titles}</span>
-                <span className="text-[9px] lg:text-[10px] uppercase tracking-widest text-zinc-500 mt-1 text-center">Títulos Mundiais</span>
-              </div>
-              <div className="flex-1 bg-white/80 backdrop-blur-md px-2 py-4 lg:py-6 rounded-2xl border border-zinc-200 shadow-sm flex flex-col items-center justify-center transition-colors hover:border-green-400/50">
-                <span className="block text-4xl lg:text-5xl font-bold text-zinc-900">{wins}</span>
-                <span className="text-[9px] lg:text-[10px] uppercase tracking-widest text-zinc-500 mt-1 text-center">Vitórias (F1)</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ProfileCard
+          label="O Pioneiro"
+          firstName="EMERSON"
+          lastName="FITTIPALDI"
+          nickname={t('fittipaldi.nickname')}
+          imageSrc={ASSETS.FITTIPALDI.PROFILE}
+          titles={titles}
+          wins={wins}
+          titlesLabel="Títulos Mundiais"
+          winsLabel="Vitórias (F1)"
+        />
 
         <div className="space-y-32 pb-32">
           <TimelineCard alignment="left" variant="zinc" period={t('fittipaldi.preF1.period')} title={t('fittipaldi.preF1.title')} text={t('fittipaldi.preF1.text')} imageSrc={ASSETS.FITTIPALDI.PRE_F1} priority={true} />

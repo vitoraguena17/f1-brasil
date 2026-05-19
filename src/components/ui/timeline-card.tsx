@@ -27,8 +27,8 @@ export const TimelineCard = forwardRef<HTMLDivElement, TimelineCardProps>(
         </div>
 
         {imageSrc ? (
-          <div className={`card-reveal hidden md:block w-[45%] h-72 lg:h-100 relative rounded-3xl card-image shadow-[0_25px_50px_-12px_rgba(0,0,0,0.60)] ${alignment === 'right' ? 'md:order-1' : 'md:order-2'}`}>
-            <div className="w-full h-full rounded-3xl overflow-hidden" style={{ filter: 'grayscale(100%)' }}>
+          <div className={`card-reveal hidden md:block w-[45%] h-72 lg:h-100 relative rounded-3xl card-image shadow-[0_25px_50px_-12px_rgba(0,0,0,0.60)] ${alignment === 'right' ? 'md:order-1' : 'md:order-2'}`} style={{ filter: 'grayscale(100%)' }}>
+            <div className="relative w-full h-full rounded-3xl overflow-hidden">
               <Image
                 src={imageSrc}
                 alt={title}
