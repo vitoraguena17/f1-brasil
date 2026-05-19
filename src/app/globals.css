@@ -17,6 +17,17 @@
     font-size: 1.2rem;
   }
 
+  html,
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
   h1,
   h2,
   h3,
@@ -53,8 +64,8 @@
   }
 
   @layer utilities {
-  .font-cursive {
-    font-family: var(--font-playfair);
+    .font-cursive {
+      font-family: var(--font-playfair);
+    }
   }
-}
 }
