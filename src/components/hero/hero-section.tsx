@@ -12,11 +12,17 @@ export function HeroSection() {
   const lenis = useLenis();
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && 'scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    window.scrollTo(0, 0);
+
     if (lenis) {
-      window.scrollTo(0, 0);
       lenis.scrollTo(0, { immediate: true });
       lenis.stop();
     }
+
     return () => {
       lenis?.start();
     };
@@ -28,6 +34,7 @@ export function HeroSection() {
     lenis.start();
     lenis.scrollTo("#fittipaldi-section", {
       duration: 1.8,
+      offset: -120,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
     });
   };

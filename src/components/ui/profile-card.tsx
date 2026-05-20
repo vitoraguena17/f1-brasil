@@ -18,10 +18,8 @@ export function ProfileCard({
 }: ProfileCardProps) {
     return (
         <div className="relative flex flex-col md:flex-row w-full justify-between items-center pl-16 md:pl-0 timeline-card gap-8 md:gap-0 mb-16 md:mb-40">
-
             <div className="card-reveal hidden md:block absolute left-[calc(50%-10px)] top-1/2 -translate-y-1/2 w-5 h-5 rounded-full border-4 border-[#f2f2f2] bg-white shadow-[0_0_20px_rgba(255,255,255,0.8)] z-10 card-dot" />
-
-            <div className="card-reveal w-full md:w-[45%] h-80 sm:h-96 lg:h-125 relative rounded-3xl card-image md:order-1 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.60)]" style={{ filter: 'grayscale(100%)' }}>
+            <div className="card-reveal w-full md:w-[45%] h-80 sm:h-96 lg:h-125 relative rounded-3xl card-image order-2 md:order-1 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.60)]" style={{ filter: 'grayscale(100%)' }} >
                 <div className="relative w-full h-full rounded-3xl overflow-hidden">
                     <Image
                         src={imageSrc}
@@ -34,7 +32,7 @@ export function ProfileCard({
                 </div>
             </div>
 
-            <div className="w-full md:w-[45%] bg-white/70 backdrop-blur-xl p-6 sm:p-8 lg:p-12 rounded-3xl border border-zinc-200 group card-content shadow-[0_20px_40px_rgba(0,0,0,0.30)] md:order-2 flex flex-col justify-center">
+            <div className="order-1 md:order-2 w-full md:w-[45%] bg-white/70 backdrop-blur-xl p-6 sm:p-8 lg:p-12 rounded-3xl border border-zinc-200 group card-content shadow-[0_20px_40px_rgba(0,0,0,0.30)] flex flex-col justify-center">
                 <span className="card-reveal inline-block text-zinc-900 text-[10px] font-bold tracking-widest uppercase mb-4">{label}</span>
 
                 <h2 className="card-reveal w-full wrap-break-word text-[8.5vw] min-[380px]:text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold uppercase tracking-tight sm:tracking-wider lg:tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-yellow-500 leading-[0.9] drop-shadow-sm">

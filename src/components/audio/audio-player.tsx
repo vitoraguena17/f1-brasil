@@ -7,7 +7,7 @@ import { useAudio } from "@/contexts/audio-context";
 export function AudioPlayer() {
   const { t } = useLanguage();
   const { activeTrack } = useAudio();
-  
+
   const audioRef = useRef<HTMLAudioElement>(null);
   const titleRef = useRef<HTMLParagraphElement>(null);
   const artistRef = useRef<HTMLParagraphElement>(null);
@@ -18,22 +18,18 @@ export function AudioPlayer() {
   const [isPausedByUser, setIsPausedByUser] = useState(false);
   const [showUI, setShowUI] = useState(false);
 
-  // Guardamos o volume e estado de pausa num ref para não interromperem a animação
   const userVolumeRef = useRef(userVolume);
   const isPausedByUserRef = useRef(isPausedByUser);
   useEffect(() => { userVolumeRef.current = userVolume; }, [userVolume]);
   useEffect(() => { isPausedByUserRef.current = isPausedByUser; }, [isPausedByUser]);
 
-  // Cores fixadas no verde, conforme pedido!
   const textAccentClass = "text-green-500";
   const progressAccentClass = "accent-green-500";
 
-  // EFEITO 1: Trata apenas da SAÍDA (Áudio Crossfade e Texto a desaparecer)
   useEffect(() => {
     if (!audioRef.current) return;
     const audio = audioRef.current;
 
-    // Se voltar para o topo do ecrã (Hero)
     if (!activeTrack) {
       gsap.to(audio, {
         volume: 0,
@@ -49,11 +45,9 @@ export function AudioPlayer() {
 
     setShowUI(true);
 
-    // Só corre se a faixa realmente mudar (mudar de piloto)
     if (activeTrack.id !== activeTrackIdRef.current) {
       activeTrackIdRef.current = activeTrack.id;
 
-      // 1. Crossfade Suave do Áudio
       gsap.to(audio, {
         volume: 0,
         duration: 0.4,
@@ -61,13 +55,12 @@ export function AudioPlayer() {
         onComplete: () => {
           audio.src = activeTrack.src;
           if (!isPausedByUserRef.current) {
-            audio.play().catch(() => {});
+            audio.play().catch(() => { });
             gsap.to(audio, { volume: userVolumeRef.current / 100, duration: 1.5, ease: "power1.in" });
           }
         }
       });
 
-      // 2. Animação de Saída do Texto (Se já houver uma música a tocar)
       if (trackInfo.title) {
         gsap.to([titleRef.current, artistRef.current], {
           opacity: 0,
@@ -76,35 +69,31 @@ export function AudioPlayer() {
           stagger: 0.05,
           ease: "power2.in",
           onComplete: () => {
-            // Só muda o estado quando o texto estiver 100% invisível
             setTrackInfo({ title: activeTrack.title, artist: activeTrack.artist });
           }
         });
       } else {
-        // Primeiro carregamento da página
         setTrackInfo({ title: activeTrack.title, artist: activeTrack.artist });
       }
     }
-  }, [activeTrack]); // Este bloco agora só obedece à mudança de música!
+  }, [activeTrack]);
 
-  // EFEITO 2: Trata apenas da ENTRADA (Texto a surgir suavemente)
   useEffect(() => {
     if (trackInfo.title) {
-      gsap.fromTo([titleRef.current, artistRef.current], 
+      gsap.fromTo([titleRef.current, artistRef.current],
         { opacity: 0, y: 10 },
-        { 
-          opacity: 1, 
-          y: 0, 
-          duration: 0.4, 
-          stagger: 0.05, 
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          stagger: 0.05,
           ease: "back.out(1.5)",
-          overwrite: "auto" // Previne saltos caso faça scroll muito rápido
+          overwrite: "auto"
         }
       );
     }
-  }, [trackInfo]); // Este bloco só obedece ao React terminar de trocar os nomes
+  }, [trackInfo]);
 
-  // EFEITO 3: Ajuste de volume em tempo real pelo utilizador
   useEffect(() => {
     if (audioRef.current && !isPausedByUser && activeTrack) {
       audioRef.current.volume = userVolume / 100;
@@ -115,7 +104,7 @@ export function AudioPlayer() {
     if (!audioRef.current) return;
     if (isPausedByUser) {
       setIsPausedByUser(false);
-      audioRef.current.play().catch(() => {});
+      audioRef.current.play().catch(() => { });
       gsap.to(audioRef.current, { volume: userVolume / 100, duration: 0.8, overwrite: "auto" });
     } else {
       setIsPausedByUser(true);
@@ -128,7 +117,7 @@ export function AudioPlayer() {
       <audio ref={audioRef} loop preload="auto" />
 
       <div className={`fixed bottom-4 left-4 right-4 sm:left-auto sm:right-12 sm:bottom-8 z-50 bg-[#09090b]/90 backdrop-blur-xl border border-zinc-800 rounded-2xl sm:rounded-full p-3 sm:p-2 sm:pr-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-5 transition-all duration-700 shadow-2xl ${showUI ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0 pointer-events-none'}`}>
-        
+
         <div className="flex items-center justify-between sm:justify-start gap-3 sm:gap-4 overflow-hidden">
           <button onClick={togglePlayPause} className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 bg-zinc-800 hover:bg-zinc-700 rounded-full flex items-center justify-center text-white transition-colors cursor-pointer">
             {!isPausedByUser ? (
@@ -140,7 +129,7 @@ export function AudioPlayer() {
 
           <div className="flex flex-col justify-center text-left flex-1 sm:flex-none py-1">
             <p className={`text-[8px] sm:text-[9px] uppercase tracking-[0.2em] font-bold mb-0.5 ${textAccentClass}`}>{t('ui.soundtrack')}</p>
-            
+
             <p ref={titleRef} className="text-xs sm:text-sm font-semibold text-zinc-100 whitespace-nowrap leading-tight mb-0.5 will-change-transform">{trackInfo.title}</p>
             <p ref={artistRef} className="text-[10px] sm:text-xs font-medium text-zinc-500 whitespace-nowrap leading-tight will-change-transform">{trackInfo.artist}</p>
           </div>

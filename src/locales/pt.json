@@ -5,18 +5,16 @@
     "titleBottom": "Pistas",
     "description": "Oito títulos mundiais e um país inteiro acelerando junto. O asfalto guarda a técnica, a bravura e a história de ícones que transcenderam o esporte e transformaram as manhãs de domingo na era de ouro do nosso automobilismo."
   },
-
   "ui": {
     "soundtrack": "Trilha Sonora",
     "startBtn": "Entrar na Pista"
   },
-
   "fittipaldi": {
     "name": "Emerson Fittipaldi",
     "nickname": "O Rato",
     "preF1": {
       "period": "1960 - 1969",
-      "title": "O Rato Empreendedor",
+      "title": "O Empreendedor",
       "text": "Antes da Europa, Emerson e seu irmão Wilson fundaram uma oficina em São Paulo, construindo karts e o icônico 'Fitti-Porsche'. Dividido entre administrar e correr, a pressão era asfixiante: o automobilismo era caro e ele precisava dar certo na Inglaterra quase instantaneamente, pois o empreendedorismo local financiava sua única e arriscada chance nas pistas europeias."
     },
     "lotus72": {
@@ -38,6 +36,39 @@
       "period": "1984 - 1996",
       "title": "O Renascimento na América",
       "text": "Quando muitos decretavam o fim de sua carreira após o desgaste da Copersucar, Emerson cruzou o Atlântico para conquistar a Fórmula Indy. Duas vitórias nas lendárias 500 Milhas de Indianápolis e o título de 1989 consagraram de vez o Rato como um ícone global imune ao tempo."
+    }
+  },
+  "piquet": {
+    "nickname": "O Estrategista",
+    "preF1": {
+      "period": "1971 - 1977",
+      "title": "O Início e a Garra",
+      "text": "Para correr no kart, Nelson precisou esconder sua paixão do pai, um ex-ministro da saúde. Sem apoio financeiro no início, viajou para a Europa onde chegou a trabalhar como mecânico, limpando chão de oficina para bancar seu sonho e desenvolvendo a inteligência mecânica que seria sua marca registrada."
+    },
+    "brabham81": {
+      "period": "1978 - 1981",
+      "title": "A Primeira Coroa na Brabham",
+      "text": "Adotado por Bernie Ecclestone na Brabham, Piquet tornou-se o líder técnico do time. Em 1981, superando o calor infernal de Las Vegas e um desgaste físico extremo, ele levou o modelo BT49C ao limite para bater os favoritos e conquistar seu primeiro título mundial."
+    },
+    "brabham83": {
+      "period": "1983 - 1985",
+      "title": "A Era Turbo e o Tema da Vitória",
+      "text": "Desenvolvendo os temidos motores BMW Turbo com Gordon Murray, Nelson moldou a lendária Brabham BT52 e sagrou-se o primeiro campeão mundial da era turbo da F1. Foi também neste ano, no GP do Brasil, que o icônico 'Tema da Vitória' tocou pela primeira vez na TV: uma ideia do narrador Galvão Bueno para eternizar os triunfos brasileiros, estreando justamente com uma vitória de Piquet."
+    },
+    "williams87": {
+      "period": "1986 - 1987",
+      "title": "A Guerra Fria e a Manobra do Século",
+      "text": "Na Williams, viveu uma batalha interna épica com Nigel Mansell. Foi nesse carro, em 1986, que eternizou a manobra do século na Hungria: ultrapassando Ayrton Senna por fora, derrapando de lado. Em 1987, usou sua precisão cirúrgica de acerto para vencer a guerra psicológica contra a própria equipe e sagrar-se Tricampeão."
+    },
+    "benetton": {
+      "period": "1990 - 1991",
+      "title": "O Último Brilho",
+      "text": "Considerado veterano por muitos, Nelson foi para a Benetton provar que sua genialidade estava intacta. Tirou coelhos da cartola com vitórias memoráveis em pistas extremamente exigentes como Suzuka e Adelaide, encerrando sua brilhante jornada na Fórmula 1 em alto nível."
+    },
+    "posF1": {
+      "period": "1992 - Presente",
+      "title": "Endurance e a Sobrevivência",
+      "text": "Após a F1, Nelson sobreviveu a um gravíssimo acidente nas 500 Milhas de Indianápolis que esmagou suas pernas. Contrariando os médicos, voltou a acelerar nas pistas de Endurance com o icônico McLaren F1 GTR em Le Mans. Hoje, segue como uma lenda viva do automobilismo mundial."
     }
   }
 }

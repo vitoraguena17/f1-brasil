@@ -5,12 +5,10 @@
     "titleBottom": "Track",
     "description": "Eight world titles and an entire country accelerating together. The asphalt holds the technique, bravery, and history of icons who transitioned the sport and transformed Sunday mornings into the golden era of our motorsport."
   },
-
   "ui": {
     "soundtrack": "Soundtrack",
     "startBtn": "Enter the Track"
   },
-  
   "fittipaldi": {
     "name": "Emerson Fittipaldi",
     "nickname": "Emmo",
@@ -38,6 +36,39 @@
       "period": "1984 - 1996",
       "title": "Rebirth in America",
       "text": "When many declared his career over after the toll of the Copersucar years, Emerson crossed the Atlantic to conquer IndyCar. Two victories at the legendary Indianapolis 500 and the 1989 championship cemented Emmo as a timeless global icon."
+    }
+  },
+  "piquet": {
+    "nickname": "The Strategist",
+    "preF1": {
+      "period": "1971 - 1977",
+      "title": "The Beginning and the Grit",
+      "text": "To race karts, Nelson had to hide his passion from his father, a former minister. Without financial support early on, he traveled to Europe where he worked as a mechanic, sweeping workshop floors to fund his dream and developing the mechanical intelligence that would become his trademark."
+    },
+    "brabham81": {
+      "period": "1978 - 1981",
+      "title": "The First Crown at Brabham",
+      "text": "Adopted by Bernie Ecclestone at Brabham, Piquet became the team's technical leader. In 1981, overcoming the infernal heat of Las Vegas and extreme physical exhaustion, he pushed the BT49C to the limit to beat the favorites and claim his first world title."
+    },
+    "brabham83": {
+      "period": "1983 - 1985",
+      "title": "The Turbo Era and the Victory Theme",
+      "text": "Developing the brutal BMW Turbo engines alongside designer Gordon Murray, Nelson shaped the legendary Brabham BT52 and became the first F1 world champion of the turbo era. It was also in this year, at the Brazilian GP, that the iconic 'Victory Theme' played for the first time on TV: an idea by broadcaster Galvão Bueno to immortalize Brazilian triumphs, debuting exactly with a Piquet victory."
+    },
+    "williams87": {
+      "period": "1986 - 1987",
+      "title": "Cold War and the Overtake of the Century",
+      "text": "At Williams, he lived an epic internal battle with Nigel Mansell. It was in this car, in 1986, that he immortalized the maneuver of the century in Hungary: overtaking Ayrton Senna around the outside, drifting sideways. In 1987, he used his surgical setup precision to win the psychological war against his own team and become a Three-time Champion."
+    },
+    "benetton": {
+      "period": "1990 - 1991",
+      "title": "The Last Brilliance",
+      "text": "Considered a veteran by many, Nelson went to Benetton to prove his genius was intact. He pulled rabbits out of a hat with memorable victories on extremely demanding tracks like Suzuka and Adelaide, ending his brilliant Formula 1 journey at a high level."
+    },
+    "posF1": {
+      "period": "1992 - Present",
+      "title": "Endurance and Survival",
+      "text": "After F1, Nelson survived a horrific crash at the Indy 500 that severely crushed his legs. Defying doctors, he returned to racing in Endurance events with the iconic McLaren F1 GTR at Le Mans. Today, he remains a living legend of global motorsport."
     }
   }
 }

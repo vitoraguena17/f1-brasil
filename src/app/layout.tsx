@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Poppins, Playfair_Display } from "next/font/google";
 import { LanguageProvider } from "@/contexts/language-context";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
-import { ScrollProgress } from "@/components/ui/scroll-progress"; // IMPORTAÇÃO ADICIONADA AQUI
+import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { AudioProvider } from "@/contexts/audio-context";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -58,14 +59,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
         <SmoothScroll>
           <LanguageProvider>
-            
-            {/* A BARRA ADICIONADA AQUI: Sempre visível, presa no topo e lendo os dados do Lenis */}
-            <ScrollProgress />
-
-            <div className="px-6 md:px-12 lg:px-24 mx-auto w-full max-w-480">
-              {children}
-            </div>
-            
+            <AudioProvider>
+              <ScrollProgress />
+              <div className="px-6 md:px-12 lg:px-24 mx-auto w-full max-w-480">
+                {children}
+              </div>
+            </AudioProvider>
           </LanguageProvider>
         </SmoothScroll>
       </body>

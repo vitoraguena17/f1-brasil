@@ -12,7 +12,8 @@ export function useDriverStats(driverId: string, defaultWins: string, defaultTit
       try {
         const winsRes = await api.get(`drivers/${driverId}/results/1.json?limit=1`);
         if (isMounted) {
-          setWins(winsRes.data.MRData.total);
+          const fetchedWins = winsRes.data.MRData.total;
+          setWins(fetchedWins === "0" ? defaultWins : fetchedWins);
           setTitles(defaultTitles);
         }
       } catch (e) {
