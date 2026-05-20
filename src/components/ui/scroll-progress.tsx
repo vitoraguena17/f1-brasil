@@ -24,11 +24,7 @@ export function ScrollProgress() {
 
   return (
     <div className="fixed top-0 left-0 right-0 h-1 md:h-1.5 z-100 pointer-events-none bg-zinc-950/20">
-      <div
-        ref={barRef}
-        className="h-full bg-linear-to-r from-green-500 to-yellow-500 origin-left will-change-transform"
-        style={{ transform: "scaleX(0)" }}
-      />
+      <div ref={barRef} className="h-full bg-linear-to-r from-green-500 to-yellow-500 origin-left will-change-transform" style={{ transform: "scaleX(0)" }} />
     </div>
   );
 }

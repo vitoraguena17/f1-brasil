@@ -31,10 +31,7 @@ export function EditorialText({ content, delay = 0, className = "" }: EditorialT
   }, { dependencies: [content] });
 
   return (
-    <p
-      ref={textRef}
-      className={`text-xs md:text-sm leading-relaxed text-left opacity-80 ${className}`}
-    >
+    <p ref={textRef} className={`text-xs md:text-sm leading-relaxed text-left opacity-80 ${className}`} >
       {content}
     </p>
   );
