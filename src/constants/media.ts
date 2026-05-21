@@ -4,6 +4,9 @@ export const ASSETS = {
     PIQUET: "/audio/tema-da-vitoria.mp3",
     SENNA: "/audio/the-best-tina-turner.mp3",
     SENNA_LEGACY: "/audio/tema-vitoria-funeral.mp3",
+    BARRICHELLO: "/audio/dont-stop-me-now.mp3",
+    MASSA: "/audio/the-winner-takes-it-all.mp3",
+    BORTOLETO: "/audio/just-keep-watching.mp3",
   },
 
   FITTIPALDI: {
@@ -41,6 +44,29 @@ export const ASSETS = {
     IMOLA: "/senna/img-imola.jpg",
     CORTEGO: "/senna/img-cortego.jpg",
     INSTITUTO: "/senna/img-instituto.png",
-    SIGNATURE: "/senna/senna-signature.svg" 
-  }
+    SIGNATURE: "/senna/senna-signature.svg"
+  },
+
+  BARRICHELLO: {
+    PROFILE: "/barrichello/img-rubinho-profile.jpg",
+    EARLY: "/barrichello/img-rubinho-senna.jpg",
+    IMOLA: "/barrichello/img-rubinho-1994.jpg",
+    FERRARI: "/barrichello/img-rubinho-ferrari.jpg",
+    BRAWN: "/barrichello/img-rubinho-brawn.jpg",
+    STOCKCAR: "/barrichello/rubinho-stockcar.jpg",
+    FAMILY: "/barrichello/rubinho-family.jpg",
+  },
+
+  MASSA: {
+    PROFILE: "/massa/img-massa-profile.jpg",
+    PRE_F1: "/massa/img-massa-sauber.jpg",
+    FERRARI: "/massa/img-massa-ferrari-interlagos.jpg",
+    DRAMA2008: "/massa/img-massa-interlagos-2008.jpg",
+    MOLA: "/massa/img-massa-mola-hungary.jpg",
+    STOCKCAR: "/massa/img-massa-stockcar.jpg",
+  },
+
+  BORTOLETO: {
+    HERO: "/bortoleto/img-bortoleto-profile.jpg",
+  },
 };

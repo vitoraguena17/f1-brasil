@@ -71,7 +71,6 @@
       "text": "Após a F1, Nelson sobreviveu a um gravíssimo acidente nas 500 Milhas de Indianápolis que esmagou suas pernas. Contrariando os médicos, voltou a acelerar nas pistas de Endurance com o icônico McLaren F1 GTR em Le Mans. Hoje, segue como uma lenda viva do automobilismo mundial."
     }
   },
-
   "senna": {
     "nickname": "Beco",
     "preF1": {
@@ -115,7 +114,6 @@
       "text": "No GP da Europa em Donington Park, Senna cravou a maior primeira volta de todos os tempos. Largando em 4º sob chuva forte e caindo para 5º, ele encontrou aderência onde não existia e ultrapassou Schumacher, Wendlinger, Hill e Prost em menos de um minuto para assumir a liderança."
     }
   },
-
   "sennaLegacy": {
     "imola": {
       "title": "O Fim de Semana Sombrio",
@@ -132,5 +130,104 @@
     "stats": "161 GPs • 80 POLE POSITIONS • 41 VITÓRIAS",
     "goat": "Para sempre, o maior de todos os tempos.",
     "quote": "\"Seja você quem for, seja qual for a posição social que você tenha na vida, a mais alta ou a mais baixa, tenha sempre como meta muita força, muita determinação e sempre faça tudo com muito amor e com muita fé em Deus, que um dia você chega lá. De alguma maneira você chega lá.\""
+  },
+  "barrichello": {
+    "nickname": "Rubinho",
+    "early": {
+      "period": "1993",
+      "title": "A Promessa e o Padrinho",
+      "text": "Desde os tempos de kart, Rubens Barrichello despontava como uma grande promessa. Chegou à F1 em 1993 pela equipe Jordan e logo chamou a atenção de Ayrton Senna. A relação dos dois era de mestre e aprendiz, construindo uma grande amizade nos paddocks e tornando Rubinho o sucessor natural do ídolo brasileiro."
+    },
+    "imola": {
+      "period": "1994",
+      "title": "O Fim de Semana Sombrio",
+      "text": "O GP de Ímola em 1 de maio de 1994 marcou sua vida para sempre. Na sexta-feira, Rubinho sofreu um acidente assustador na Variante Bassa, decolando e chocando-se contra as grades. Ayrton foi a primeira pessoa que ele viu ao acordar no centro médico. Dois dias depois, Barrichello perderia seu grande amigo e mentor nas pistas."
+    },
+    "ferrari": {
+      "period": "2000 - 2005",
+      "title": "A Glória e o \"Hoje Sim\"",
+      "text": "Na Ferrari, ao lado de Michael Schumacher, viveu o auge da equipe. Conquistou sua primeira e emocionante vitória na Alemanha em 2000, largando de 18º debaixo de chuva. Porém, também enfrentou as polêmicas ordens de equipe, imortalizadas no GP da Áustria de 2002 com a inesquecível narração de Cléber Machado: \"Hoje não, hoje não... hoje sim!\""
+    },
+    "brawn": {
+      "period": "2009",
+      "title": "O Renascimento na Brawn GP",
+      "text": "Quando muitos achavam que sua carreira estava no fim, Rubinho renasceu com a histórica Brawn GP em 2009. Voltou a vencer, disputou o título mundial e provou sua resiliência e seu talento inquestionável como acertador de carros, estendendo sua jornada até se tornar, na época, o piloto com mais GPs disputados na história da Fórmula 1."
+    },
+    "stockcar": {
+      "period": "2012 - Presente",
+      "title": "O Novo Rei do Asfalto Nacional",
+      "text": "Fora da F1, Rubens encontrou um novo lar no automobilismo brasileiro. Tornou-se um dos maiores nomes da Stock Car com dois títulos históricos em 2014 e 2022. Sempre movido pelo desejo inabalável de correr, Rubinho também expandiu seus horizontes ao ingressar na NASCAR Brasil Sprint Race, consolidando sua posição como o grande embaixador e referência viva das pistas do país."
+    },
+    "family": {
+      "period": "Presente",
+      "title": "Legado em Família",
+      "text": "O amor pela velocidade corre forte nas veias da família. Hoje, além de competir em altíssimo nível, Rubens vive a emoção única de dividir os paddocks e compartilhar telemetria com seus filhos pilotos, Dudu e Fefo Barrichello. Atuando como mentor e companheiro de pista, ele garante que a dinastia e a paixão dos Barrichello pelo esporte continuem acelerando forte."
+    }
+  },
+  "massa": {
+    "nickname": "Animal",
+    "preF1": {
+      "period": "1999 - 2005",
+      "title": "O Caminho até Maranello",
+      "text": "Felipe Massa brilhou rápido e forte nas categorias de base, sendo campeão dominante na Fórmula Chevrolet e na Euro Fórmula 3000. Sua velocidade pura chamou a atenção da Sauber, equipe pela qual estreou na F1 em 2002. Apesar da inexperiência inicial que lhe rendeu críticas, ele amadureceu como piloto de testes da Ferrari antes de assumir sua vaga definitiva no grid."
+    },
+    "ferrari": {
+      "period": "2006",
+      "title": "Quebrando o Jejum de Senna",
+      "text": "Assumindo a vaga de titular na Ferrari ao lado do seu grande mentor, Michael Schumacher, Massa rapidamente se encontrou. O ano de 2006 coroou sua ascensão com duas vitórias memoráveis, mas uma delas foi histórica: ao vencer o GP do Brasil de macacão verde e amarelo, ele quebrou um jejum de 13 anos sem vitórias brasileiras em Interlagos, herdado desde Ayrton Senna em 1993."
+    },
+    "drama2008": {
+      "period": "2008",
+      "title": "15 Segundos de Campeão",
+      "text": "A temporada de 2008 foi uma montanha-russa de emoções, marcada por erros cruciais da Ferrari e pelo escandaloso 'Singapura Gate' (a batida armada da Renault que lhe custou uma vitória certa). A decisão épica aconteceu em Interlagos. Debaixo de chuva, Felipe cruzou a linha de chegada como Campeão do Mundo. Durante 15 angustiantes segundos, o Brasil comemorou, até Lewis Hamilton ultrapassar Timo Glock na última curva. Massa perdeu o título por 1 ponto, mas ganhou o respeito eterno do mundo ao bater no peito chorando no pódio."
+    },
+    "mola": {
+      "period": "2009",
+      "title": "O Milagre de Budapeste",
+      "text": "A vida de Massa mudou em fração de segundos durante a classificação do GP da Hungria. Uma mola de quase 1 kg se soltou do carro de Rubens Barrichello e atingiu o capacete de Felipe a mais de 250 km/h. O acidente gravíssimo causou fraturas no crânio e colocou sua vida em risco. Com uma força de vontade invejável, ele se recuperou totalmente e voltou às pistas no ano seguinte."
+    },
+    "stockcar": {
+      "period": "2018 - Presente",
+      "title": "A Paixão não Freia",
+      "text": "Após uma emocionante despedida da F1 pela Williams, Felipe não conseguiu abandonar o asfalto. Competiu na Fórmula E e, eventualmente, encontrou seu lugar na Stock Car Brasil. Dividindo curvas com antigos rivais e amigos, ele segue mostrando que a paixão por acelerar no seu país natal e sua competitividade inata são maiores que qualquer obstáculo."
+    }
+  },
+  "bortoleto": {
+    "label": "O Presente e o Futuro",
+    "title": "A Nova Era do Brasil na F1",
+    "text": "Após um doloroso jejum de anos sem um piloto brasileiro titular no grid, a bandeira verde e amarela voltou a tremular forte com a chegada de Gabriel Bortoleto. Campeão da F3, protagonista absoluto na F2 e agora em seu segundo ano como titular pela Audi, Bortoleto não apenas carrega o peso de uma nação apaixonada, mas também a promessa de que a nossa dinastia no automobilismo mundial está muito longe de acabar."
+  },
+  "honorable": {
+    "title": "As Lendas que Pavimentaram o Caminho",
+    "subtitle": "A história do Brasil na Fórmula 1 não foi escrita apenas por múltiplos vencedores. Ao todo, 32 pilotos brasileiros alinharam no grid oficial. Celebramos aqui todos aqueles que compartilharam desse sonho e deixaram sua marca no asfalto da categoria máxima do automobilismo.",
+    "drivers": {
+      "landi": { "name": "Chico Landi", "desc": "O pioneiro absoluto. Primeiro brasileiro a disputar e pontuar em corridas na F1 na década de 1950." },
+      "bianco": { "name": "Gino Bianco", "desc": "Correu na temporada de 1952, sendo um dos primeiros a representar o Brasil na Europa." },
+      "ramos": { "name": "Hermano da Silva Ramos", "desc": "Franco-brasileiro, o primeiro piloto nascido no Brasil a pontuar na categoria em 1956." },
+      "dorey": { "name": "Fritz d'Orey", "desc": "Participou de três Grandes Prêmios na desafiadora temporada de 1959." },
+      "wfittipaldi": { "name": "Wilsinho Fittipaldi", "desc": "Correu pela Brabham e foi o visionário criador da Copersucar-Fittipaldi, a primeira equipe brasileira na F1." },
+      "bueno": { "name": "Luiz Bueno", "desc": "Multicampeão nacional, coroou sua carreira disputando o GP do Brasil de 1973 pela Surtees." },
+      "pace": { "name": "José Carlos Pace", "desc": "O inesquecível 'Moco'. Venceu brilhantemente no Brasil (1975) e hoje dá nome ao Autódromo de Interlagos." },
+      "hoffmann": { "name": "Ingo Hoffmann", "desc": "Maior campeão da Stock Car, disputou etapas na F1 pela escuderia Fittipaldi nos anos 70." },
+      "ribeiro": { "name": "Alex Ribeiro", "desc": "Ficou eternizado pelo carro com a frase 'Jesus Saves', correndo por March, Ensign e Fittipaldi." },
+      "serra": { "name": "Chico Serra", "desc": "Lenda do automobilismo nacional, marcou pontos importantes no GP da Bélgica de 1982." },
+      "boesel": { "name": "Raul Boesel", "desc": "Competiu por March e Ligier antes de construir uma trajetória vitoriosa na Indy e no Mundial de Marcas." },
+      "moreno": { "name": "Roberto Moreno", "desc": "O rei da superação. Famoso 'Super Sub', conquistou um pódio histórico pela Benetton no Japão em 1990." },
+      "gugelmin": { "name": "Maurício Gugelmin", "desc": "Marcou época com a icônica March turquesa e subiu ao pódio no empolgante GP do Brasil de 1989." },
+      "cfittipaldi": { "name": "Christian Fittipaldi", "desc": "Sobrinho de Emerson, cravou pontos valiosos por Minardi e Footwork nas difíceis temporadas dos anos 90." },
+      "diniz": { "name": "Pedro Diniz", "desc": "Construiu uma carreira de respeito nos anos 90, pontuando consistentemente por Ligier, Arrows e Sauber." },
+      "rosset": { "name": "Ricardo Rosset", "desc": "Vice-campeão da F3000, pilotou na F1 defendendo equipes como Arrows, Lola e Tyrrell." },
+      "marques": { "name": "Tarso Marques", "desc": "Mostrou seu talento pela Minardi, chegando a ser o primeiro companheiro de equipe de Fernando Alonso." },
+      "zonta": { "name": "Ricardo Zonta", "desc": "Campeão da FIA GT, teve passagens importantes como titular pela BAR e pela Toyota." },
+      "burti": { "name": "Luciano Burti", "desc": "Correu por Jaguar e Prost até que um grave acidente em Spa interrompesse sua promissora carreira na F1." },
+      "bernoldi": { "name": "Enrique Bernoldi", "desc": "Revelado pela Red Bull, ficou eternizado por segurar o poderoso carro de David Coulthard em Mônaco (2001)." },
+      "damatta": { "name": "Cristiano da Matta", "desc": "Chegou à Toyota na F1 com status de estrela após conquistar o título da CART (Fórmula Indy) de forma dominante." },
+      "pizzonia": { "name": "Antônio Pizzonia", "desc": "O 'Jungle Boy', impressionou com sua velocidade e marcou pontos como titular e substituto pela Williams." },
+      "piquetjr": { "name": "Nelson Piquet Jr.", "desc": "Herdou a velocidade do pai e conquistou um excelente 2º lugar no pódio da Alemanha em 2008 pela Renault." },
+      "digrassi": { "name": "Lucas di Grassi", "desc": "Disputou temporada pela Virgin antes de se tornar um dos maiores nomes da história da Fórmula E." },
+      "bsenna": { "name": "Bruno Senna", "desc": "Trouxe o peso e a emoção do lendário sobrenome de volta ao grid, correndo por HRT, Renault e Williams." },
+      "nasr": { "name": "Felipe Nasr", "desc": "Brilhou em sua estreia com a Sauber e protagonizou os pontos heroicos que salvaram a equipe Manor no Brasil em 2016." },
+      "pfittipaldi": { "name": "Pietro Fittipaldi", "desc": "O neto de Emerson que devolveu o sobrenome à categoria, substituindo Grosjean pela Haas em duas corridas em 2020." }
+    }
   }
 }

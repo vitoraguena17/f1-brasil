@@ -71,7 +71,6 @@
       "text": "After F1, Nelson survived a horrific crash at the Indy 500 that severely crushed his legs. Defying doctors, he returned to racing in Endurance events with the iconic McLaren F1 GTR at Le Mans. Today, he remains a living legend of global motorsport."
     }
   },
-
   "senna": {
     "nickname": "Magic Senna",
     "preF1": {
@@ -113,6 +112,122 @@
       "period": "1993",
       "title": "The Lap of the Gods",
       "text": "At the European GP in Donington Park, Senna delivered the greatest opening lap of all time. Starting 4th in heavy rain and dropping to 5th, he found grip where none existed, overtaking Schumacher, Wendlinger, Hill, and Prost in less than a minute to take the lead."
+    }
+  },
+  "sennaLegacy": {
+    "imola": {
+      "title": "The Dark Weekend",
+      "text": "Imola, 1994. The weekend was already covered by a dense cloud. On Friday, Rubens Barrichello's severe crash. On Saturday, the tragic death of Roland Ratzenberger. Senna was visibly apprehensive, even crying in the pits and questioning whether he should race. But his passion and instinct spoke louder."
+    },
+    "comocao": {
+      "title": "The Country That Stopped",
+      "text": "May 1, 1994, silenced Brazil. When the Varig plane brought his body back, the entire country literally came to a halt. Millions of people took to the streets of São Paulo in one of the largest funeral processions in world history, mourning the loss not just of a driver, but of a national hero."
+    },
+    "instituto": {
+      "title": "Far Beyond the Track",
+      "text": "His greatness wasn't limited to the asphalt. In secret, Ayrton donated millions to hospitals and assistance programs. From this desire to transform the country, the Ayrton Senna Institute was born, which has already helped educate and change the reality of millions of Brazilian children and youth."
+    },
+    "stats": "161 GPs • 80 POLE POSITIONS • 41 WINS",
+    "goat": "Forever, the greatest of all time.",
+    "quote": "\"Whoever you are, whatever social position you have in life, the highest or the lowest, always have as a goal a lot of strength, a lot of determination and always do everything with a lot of love and a lot of faith in God, that one day you will get there. Somehow you will get there.\""
+  },
+  "barrichello": {
+    "nickname": "Rubinho",
+    "early": {
+      "period": "1993",
+      "title": "The Promise and the Godfather",
+      "text": "Since his karting days, Rubens Barrichello emerged as a great promise. He reached F1 in 1993 with the Jordan team and quickly caught the attention of Ayrton Senna. Their relationship was one of master and apprentice, building a great friendship in the paddocks and making Rubinho the natural successor of the Brazilian idol."
+    },
+    "imola": {
+      "period": "1994",
+      "title": "The Dark Weekend",
+      "text": "The Imola GP on May 1, 1994, marked his life forever. On Friday, Rubinho suffered a frightening crash at the Variante Bassa, taking off and hitting the fences. Ayrton was the first person he saw when he woke up in the medical center. Two days later, Barrichello would lose his great friend and mentor on the track."
+    },
+    "ferrari": {
+      "period": "2000 - 2005",
+      "title": "The Glory and the \"Yes, Today!\"",
+      "text": "At Ferrari, alongside Michael Schumacher, he experienced the peak of the team. He conquered his first and emotional victory in Germany in 2000, starting from 18th under the rain. However, he also faced controversial team orders, immortalized at the 2002 Austrian GP with the unforgettable Brazilian broadcast call: \"Not today, not today... yes, today!\""
+    },
+    "brawn": {
+      "period": "2009",
+      "title": "Rebirth at Brawn GP",
+      "text": "When many thought his career was coming to an end, Rubinho was reborn with the historic Brawn GP in 2009. He returned to winning, fought for the world title, and proved his resilience and unquestionable talent as a car setup master, extending his journey to become, at the time, the driver with the most GPs raced in Formula 1 history."
+    },
+    "stockcar": {
+      "period": "2012 - Present",
+      "title": "The New King of National Asphalt",
+      "text": "Outside of F1, Rubens found a new home in Brazilian motorsport. He became one of the greatest names in Stock Car with two historic titles in 2014 and 2022. Always driven by an unshakable desire to race, Rubinho also expanded his horizons by joining the NASCAR Brasil Sprint Race, consolidating his position as the great ambassador and living reference of the country's tracks."
+    },
+    "family": {
+      "period": "Present",
+      "title": "Family Legacy",
+      "text": "The love for speed runs strong in the family's veins. Today, besides competing at the highest level, Rubens experiences the unique thrill of sharing the paddocks and telemetry with his racing sons, Dudu and Fefo Barrichello. Acting as a mentor and track companion, he ensures that the Barrichello dynasty and passion for the sport keep accelerating hard."
+    }
+  },
+  "massa": {
+    "nickname": "Animal",
+    "preF1": {
+      "period": "1999 - 2005",
+      "title": "The Road to Maranello",
+      "text": "Felipe Massa shined fast and bright in the junior categories, being a dominant champion in Formula Chevrolet and Euro Formula 3000. His pure speed caught the attention of Sauber, the team with which he debuted in F1 in 2002. Despite the initial inexperience that drew criticism, he matured as a Ferrari test driver before permanently taking his spot on the grid."
+    },
+    "ferrari": {
+      "period": "2006",
+      "title": "Breaking Senna's Drought",
+      "text": "Taking the starting seat at Ferrari alongside his great mentor, Michael Schumacher, Massa quickly found his footing. The 2006 season crowned his rise with two memorable victories, but one of them was historic: by winning the Brazilian GP in a green and yellow race suit, he broke a 13-year drought without Brazilian victories at Interlagos, inherited since Ayrton Senna in 1993."
+    },
+    "drama2008": {
+      "period": "2008",
+      "title": "15 Seconds of a Champion",
+      "text": "The 2008 season was a rollercoaster of emotions, marked by crucial Ferrari mistakes and the scandalous 'Crashgate' (the staged Renault crash that cost him a certain victory). The epic decider took place at Interlagos. Under the rain, Felipe crossed the finish line as World Champion. For 15 agonizing seconds, Brazil celebrated, until Lewis Hamilton overtook Timo Glock on the final corner. Massa lost the title by 1 point, but earned the world's eternal respect by beating his chest in tears on the podium."
+    },
+    "mola": {
+      "period": "2009",
+      "title": "The Miracle of Budapest",
+      "text": "Massa's life changed in a fraction of a second during qualifying for the Hungarian GP. A suspension spring weighing almost 1 kg detached from Rubens Barrichello's car and struck Felipe's helmet at over 250 km/h. The severe accident caused skull fractures and put his life at risk. With an enviable willpower, he fully recovered and returned to the tracks the following year."
+    },
+    "stockcar": {
+      "period": "2018 - Present",
+      "title": "The Passion Doesn't Brake",
+      "text": "After an emotional farewell to F1 with Williams, Felipe couldn't leave the asphalt behind. He competed in Formula E and eventually found his place in Stock Car Brasil. Sharing corners with old rivals and friends, he continues to show that the passion for racing in his home country and his innate competitiveness are greater than any obstacle."
+    }
+  },
+  "bortoleto": {
+    "label": "The Present and Future",
+    "title": "Brazil's New Era in F1",
+    "text": "After a painful multi-year drought without a full-time Brazilian driver on the grid, the green and yellow flag waves strong again with the arrival of Gabriel Bortoleto. An F3 Champion, a dominant force in F2, and now in his second year as a full-time driver for Audi, Bortoleto carries not just the weight of a passionate nation, but the promise that our global motorsport dynasty is far from over."
+  },
+  "honorable": {
+    "title": "The Legends Who Paved the Way",
+    "subtitle": "Brazil's history in Formula 1 wasn't written only by multiple race winners. In total, 32 Brazilian drivers have lined up on the official grid. We celebrate here all those who shared this dream and left their mark on the asphalt of motorsport's pinnacle category.",
+    "drivers": {
+      "landi": { "name": "Chico Landi", "desc": "The absolute pioneer. The first Brazilian to start and score points in F1 races in the 1950s." },
+      "bianco": { "name": "Gino Bianco", "desc": "Raced in the 1952 season, being one of the first to represent Brazil in Europe." },
+      "ramos": { "name": "Hermano da Silva Ramos", "desc": "Franco-Brazilian, the first driver born in Brazil to score points in the category in 1956." },
+      "dorey": { "name": "Fritz d'Orey", "desc": "Participated in three Grand Prix weekends during the challenging 1959 season." },
+      "wfittipaldi": { "name": "Wilsinho Fittipaldi", "desc": "Raced for Brabham and was the visionary creator of Copersucar-Fittipaldi, the first Brazilian F1 team." },
+      "bueno": { "name": "Luiz Bueno", "desc": "A national multi-champion who crowned his career by entering the 1973 Brazilian GP for Surtees." },
+      "pace": { "name": "José Carlos Pace", "desc": "The unforgettable 'Moco'. Won brilliantly in Brazil (1975) and today lends his name to the Interlagos Circuit." },
+      "hoffmann": { "name": "Ingo Hoffmann", "desc": "Stock Car's greatest champion, he contested F1 rounds for the Fittipaldi team in the 70s." },
+      "ribeiro": { "name": "Alex Ribeiro", "desc": "Immortalized by his car featuring the phrase 'Jesus Saves', racing for March, Ensign, and Fittipaldi." },
+      "serra": { "name": "Chico Serra", "desc": "A national motorsport legend, scored important points at the 1982 Belgian Grand Prix." },
+      "boesel": { "name": "Raul Boesel", "desc": "Competed for March and Ligier before building a victorious career in IndyCar and World Sportscar Championship." },
+      "moreno": { "name": "Roberto Moreno", "desc": "The king of resilience. The famous 'Super Sub' scored a historic podium for Benetton in Japan (1990)." },
+      "gugelmin": { "name": "Maurício Gugelmin", "desc": "Made his mark with the iconic turquoise March and stood on the podium at the thrilling 1989 Brazilian GP." },
+      "cfittipaldi": { "name": "Christian Fittipaldi", "desc": "Emerson's nephew, scored valuable points for Minardi and Footwork during the tough 90s seasons." },
+      "diniz": { "name": "Pedro Diniz", "desc": "Built a highly respected career in the 90s, consistently scoring points for Ligier, Arrows, and Sauber." },
+      "rosset": { "name": "Ricardo Rosset", "desc": "F3000 runner-up, he drove in F1 defending teams such as Arrows, Lola, and Tyrrell." },
+      "marques": { "name": "Tarso Marques", "desc": "Showcased his talent at Minardi, notably becoming Fernando Alonso's very first teammate." },
+      "zonta": { "name": "Ricardo Zonta", "desc": "FIA GT Champion, had significant stints as a full-time driver for BAR and Toyota." },
+      "burti": { "name": "Luciano Burti", "desc": "Raced for Jaguar and Prost until a severe crash at Spa cut short his promising F1 career." },
+      "bernoldi": { "name": "Enrique Bernoldi", "desc": "A Red Bull prospect, he is immortalized for holding off David Coulthard's powerful McLaren in Monaco (2001)." },
+      "damatta": { "name": "Cristiano da Matta", "desc": "Arrived at Toyota in F1 with star status after dominantly winning the CART (IndyCar) title." },
+      "pizzonia": { "name": "Antônio Pizzonia", "desc": "The 'Jungle Boy' impressed with pure speed and scored points driving for Williams." },
+      "piquetjr": { "name": "Nelson Piquet Jr.", "desc": "Inherited his father's speed and scored an excellent 2nd place podium in Germany (2008) for Renault." },
+      "digrassi": { "name": "Lucas di Grassi", "desc": "Contested a season for Virgin before becoming one of the greatest names in Formula E history." },
+      "bsenna": { "name": "Bruno Senna", "desc": "Brought the weight and emotion of the legendary surname back to the grid, racing for HRT, Renault, and Williams." },
+      "nasr": { "name": "Felipe Nasr", "desc": "Shined on his debut with Sauber and delivered heroic points that temporarily saved Manor in Brazil (2016)." },
+      "pfittipaldi": { "name": "Pietro Fittipaldi", "desc": "Emerson's grandson who returned the surname to the category, substituting for Grosjean at Haas in late 2020." }
     }
   }
 }
