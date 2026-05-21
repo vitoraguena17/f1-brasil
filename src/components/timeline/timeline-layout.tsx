@@ -3,7 +3,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useAudio } from "@/contexts/audio-context"; 
+import { useAudio } from "@/contexts/audio-context";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -44,14 +44,32 @@ export function TimelineLayout({ id, audio, children }: TimelineLayoutProps) {
                 trigger: card,
                 start: "top 50%",
                 end: "bottom 50%",
+
+                // onToggle: Controla APENAS o destaque do texto e do pontinho (sobe e desce)
                 onToggle: (self) => {
                     const dot = card.querySelector('.card-dot');
                     const content = card.querySelector('.card-content');
-                    const image = card.querySelector('.card-image');
 
                     if (dot) gsap.to(dot, { scale: self.isActive ? 1.6 : 1, duration: 0.3, ease: "back.out(2)" });
                     if (content) gsap.to(content, { scale: self.isActive ? 1.03 : 1, borderColor: self.isActive ? 'rgba(34,197,94,0.4)' : 'rgba(228,228,231,1)', duration: 0.3 });
-                    if (image) gsap.to(image, { filter: self.isActive ? 'grayscale(0%)' : 'grayscale(100%)', duration: 0.5, ease: "power2.out" });
+                },
+
+                // onEnter: O usuário chegou na imagem descendo a tela -> Fica colorida
+                onEnter: () => {
+                    const image = card.querySelector('.card-image');
+                    if (image) gsap.to(image, { filter: 'grayscale(0%)', duration: 0.5, ease: "power2.out" });
+                },
+
+                // onEnterBack: O usuário estava lá embaixo e subiu de volta para essa imagem -> Garante que continue colorida
+                onEnterBack: () => {
+                    const image = card.querySelector('.card-image');
+                    if (image) gsap.to(image, { filter: 'grayscale(0%)', duration: 0.5, ease: "power2.out" });
+                },
+
+                // onLeaveBack: O usuário subiu a tela passando do topo da imagem -> Volta a ficar em preto e branco (escondida)
+                onLeaveBack: () => {
+                    const image = card.querySelector('.card-image');
+                    if (image) gsap.to(image, { filter: 'grayscale(100%)', duration: 0.5, ease: "power2.out" });
                 }
             });
 
