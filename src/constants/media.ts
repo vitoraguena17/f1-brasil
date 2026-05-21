@@ -2,6 +2,8 @@ export const ASSETS = {
   AUDIO: {
     FITTIPALDI: "/audio/ze-roberto-lotus-72d.mp3",
     PIQUET: "/audio/tema-da-vitoria.mp3",
+    SENNA: "/audio/the-best-tina-turner.mp3",
+    SENNA_LEGACY: "/audio/tema-vitoria-funeral.mp3",
   },
 
   FITTIPALDI: {
@@ -21,5 +23,24 @@ export const ASSETS = {
     WILLIAMS87: "/piquet/img-piquet-3.jpg",
     LOTUS_BENETTON: "/piquet/img-piquet-4.jpg",
     POS_F1: "/piquet/img-piquet-pos.jpg",
+  },
+
+  SENNA: {
+    PROFILE: "/senna/img-senna-profile.jpg",
+    PRE_F1: "/senna/img-senna-pre.jpg",
+    TOLEMAN84: "/senna/img-senna-toleman.jpg",
+    LOTUS85: "/senna/img-senna-lotus.jpg",
+    MONACO88: "/senna/img-senna-monaco88.jpg",
+    TITLE88: "/senna/img-senna-title88.jpg",
+    TITLES9091: "/senna/img-senna-titles.jpg",
+    INTERLAGOS91: "/senna/img-senna-interlagos.jpg",
+    DONINGTON93: "/senna/img-senna-donington.jpg",
+  },
+
+  SENNA_LEGACY: {
+    IMOLA: "/senna/img-imola.jpg",
+    CORTEGO: "/senna/img-cortego.jpg",
+    INSTITUTO: "/senna/img-instituto.png",
+    SIGNATURE: "/senna/senna-signature.svg" 
   }
 };

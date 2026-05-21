@@ -4,7 +4,7 @@ import { useLenis } from "lenis/react";
 import { EditorialTitle } from "../ui/editorial-title";
 import { EditorialImage } from "../ui/editorial-image";
 import { EditorialText } from "../ui/editorial-text";
-import { AnimatedButton } from "../ui/animated-button"; // Nosso novo componente!
+import { AnimatedButton } from "../ui/animated-button";
 import { useLanguage } from "@/contexts/language-context";
 
 export function HeroSection() {
@@ -40,7 +40,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="w-full h-dvh overflow-hidden flex flex-col justify-center relative pt-[11dvh] pb-20 md:pb-16">
+    <section className="w-full h-dvh overflow-hidden flex flex-col justify-center relative pt-[11dvh] pb-20 md:pb-16 px-6 md:px-12 lg:px-24">
       <div className="flex flex-col md:grid md:grid-cols-12 items-start w-full h-full">
         <div className="md:col-start-1 md:col-end-11 md:row-start-1 z-10 flex flex-col md:justify-between h-auto md:h-full pointer-events-none shrink-0">
 

@@ -70,5 +70,67 @@
       "title": "Endurance e a Sobrevivência",
       "text": "Após a F1, Nelson sobreviveu a um gravíssimo acidente nas 500 Milhas de Indianápolis que esmagou suas pernas. Contrariando os médicos, voltou a acelerar nas pistas de Endurance com o icônico McLaren F1 GTR em Le Mans. Hoje, segue como uma lenda viva do automobilismo mundial."
     }
+  },
+
+  "senna": {
+    "nickname": "Beco",
+    "preF1": {
+      "period": "1973 - 1983",
+      "title": "O Prodígio Imbatível",
+      "text": "Antes de pisar na F1, o nome de Ayrton Senna da Silva já assombrava a Europa. Ele destruiu a concorrência nas categorias de base, empilhando títulos no Kart, Fórmula Ford 1600, Fórmula Ford 2000 e, por fim, sagrando-se o grande campeão da Fórmula 3 Britânica em uma disputa histórica."
+    },
+    "toleman84": {
+      "period": "1984",
+      "title": "O Batismo na Chuva",
+      "text": "Em sua temporada de estreia com a modesta Toleman, Senna chocou o mundo em Mônaco. Sob um dilúvio, ele engoliu lendas consagradas, escalando do 13º lugar até a cola do líder Alain Prost, quando a prova foi interrompida polemicamente. Nascia ali o 'Rei da Chuva'."
+    },
+    "lotus85": {
+      "period": "1985",
+      "title": "O Nascimento da Magia",
+      "text": "A bordo da icônica Lotus preta e dourada, Ayrton conquistou sua primeira vitória no GP de Portugal, no Estoril. Novamente sob chuva extrema, ele colocou uma volta de vantagem em quase todo o grid. Naquele ano, também provou ser o mestre absoluto das classificações, cravando 7 pole positions."
+    },
+    "monaco88": {
+      "period": "1988",
+      "title": "O Estado de Transe",
+      "text": "No treino classificatório em Mônaco, Senna viveu um momento transcendental. Ele colocou absurdos 1.4 segundos sobre seu companheiro Prost no mesmo carro. Ayrton relatou que não estava mais pilotando consciente, mas num estado de transe, observando a si mesmo de fora do carro."
+    },
+    "title88": {
+      "period": "1988",
+      "title": "A Primeira Coroa",
+      "text": "No Japão, a decisão do título foi dramática. Senna largou na pole, mas o motor falhou e ele caiu para 14º. Em uma das maiores exibições de pilotagem da história, ele ultrapassou 13 carros, incluindo Prost, cruzou a linha de chegada em primeiro e sagrou-se Campeão Mundial."
+    },
+    "titles9091": {
+      "period": "1989 - 1991",
+      "title": "A Maior Rivalidade da História",
+      "text": "O bicampeonato e o tricampeonato vieram no ápice da guerra fria contra Alain Prost. Entre batidas propositais em Suzuka, polêmicas com a FIA e pura genialidade, Senna esmagou as barreiras físicas e mentais para se tornar o dono absoluto da categoria no início dos anos 90."
+    },
+    "interlagos91": {
+      "period": "1991",
+      "title": "O Grito de Interlagos",
+      "text": "Ayrton nunca havia vencido em casa. Liderando com folga, o câmbio de sua McLaren quebrou, deixando-o apenas com a 6ª marcha. Fazendo um esforço físico sobre-humano, suportando espasmos musculares e desgaste brutal, ele cruzou a linha e soltou o choro mais famoso da história do esporte."
+    },
+    "donington93": {
+      "period": "1993",
+      "title": "A Volta dos Deuses",
+      "text": "No GP da Europa em Donington Park, Senna cravou a maior primeira volta de todos os tempos. Largando em 4º sob chuva forte e caindo para 5º, ele encontrou aderência onde não existia e ultrapassou Schumacher, Wendlinger, Hill e Prost em menos de um minuto para assumir a liderança."
+    }
+  },
+
+  "sennaLegacy": {
+    "imola": {
+      "title": "O Fim de Semana Sombrio",
+      "text": "Ímola, 1994. O fim de semana já estava coberto por uma nuvem densa. Na sexta, o grave acidente de Rubens Barrichello. No sábado, a trágica morte de Roland Ratzenberger. Senna estava visivelmente apreensivo, chegou a chorar nos boxes e questionar se deveria correr. Mas a paixão e o instinto falaram mais alto."
+    },
+    "comocao": {
+      "title": "O País que Parou",
+      "text": "O dia 1º de maio de 1994 silenciou o Brasil. Quando o avião da Varig trouxe seu corpo de volta, o país inteiro parou literalmente. Milhões de pessoas tomaram as ruas de São Paulo em um dos maiores cortejos fúnebres da história mundial, chorando a perda não apenas de um piloto, mas de um herói nacional."
+    },
+    "instituto": {
+      "title": "Muito Além das Pistas",
+      "text": "Sua grandeza não se limitava ao asfalto. Em segredo, Ayrton doava milhões para hospitais e programas de assistência. Desse desejo de transformar o país, nasceu o Instituto Ayrton Senna, que já ajudou a educar e mudar a realidade de milhões de crianças e jovens brasileiros."
+    },
+    "stats": "161 GPs • 80 POLE POSITIONS • 41 VITÓRIAS",
+    "goat": "Para sempre, o maior de todos os tempos.",
+    "quote": "\"Seja você quem for, seja qual for a posição social que você tenha na vida, a mais alta ou a mais baixa, tenha sempre como meta muita força, muita determinação e sempre faça tudo com muito amor e com muita fé em Deus, que um dia você chega lá. De alguma maneira você chega lá.\""
   }
 }

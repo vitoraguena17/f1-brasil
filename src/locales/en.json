@@ -70,5 +70,49 @@
       "title": "Endurance and Survival",
       "text": "After F1, Nelson survived a horrific crash at the Indy 500 that severely crushed his legs. Defying doctors, he returned to racing in Endurance events with the iconic McLaren F1 GTR at Le Mans. Today, he remains a living legend of global motorsport."
     }
+  },
+
+  "senna": {
+    "nickname": "Magic Senna",
+    "preF1": {
+      "period": "1973 - 1983",
+      "title": "The Unbeatable Prodigy",
+      "text": "Before stepping into F1, Ayrton Senna's name was already haunting Europe. He destroyed the competition in junior categories, stacking titles in Karting, Formula Ford 1600, Formula Ford 2000, and ultimately becoming the British Formula 3 champion in a historic battle."
+    },
+    "toleman84": {
+      "period": "1984",
+      "title": "Baptism in the Rain",
+      "text": "In his debut season with the modest Toleman, Senna shocked the world in Monaco. Under a deluge, he swallowed established legends, climbing from 13th to catch the leader Alain Prost right before the race was controversially stopped. The 'Rainmaster' was born."
+    },
+    "lotus85": {
+      "period": "1985",
+      "title": "The Birth of Magic",
+      "text": "Aboard the iconic black and gold Lotus, Ayrton claimed his first victory at the Portuguese GP in Estoril. Once again under extreme rain, he lapped almost the entire field. That year, he also proved to be the absolute master of qualifying, securing 7 pole positions."
+    },
+    "monaco88": {
+      "period": "1988",
+      "title": "The Trance State",
+      "text": "During qualifying in Monaco, Senna experienced a transcendental moment. He put an absurd 1.4 seconds on his teammate Prost in the same car. Ayrton reported that he was no longer driving consciously, but in a trance state, observing himself from outside the car."
+    },
+    "title88": {
+      "period": "1988",
+      "title": "The First Crown",
+      "text": "In Japan, the title decider was dramatic. Senna started on pole, but his engine stalled, dropping him to 14th. In one of the greatest driving displays in history, he overtook 13 cars, including Prost, crossed the finish line first, and was crowned World Champion."
+    },
+    "titles9091": {
+      "period": "1989 - 1991",
+      "title": "The Greatest Rivalry in History",
+      "text": "The second and third championships came at the peak of the cold war against Alain Prost. Between intentional crashes at Suzuka, controversies with the FIA, and pure genius, Senna shattered physical and mental barriers to become the absolute ruler of the sport in the early 90s."
+    },
+    "interlagos91": {
+      "period": "1991",
+      "title": "The Scream of Interlagos",
+      "text": "Ayrton had never won at home. Leading comfortably, his McLaren's gearbox broke, leaving him with only 6th gear. Making a superhuman physical effort, enduring muscle spasms and brutal exhaustion, he crossed the line and let out the most famous cry in sports history."
+    },
+    "donington93": {
+      "period": "1993",
+      "title": "The Lap of the Gods",
+      "text": "At the European GP in Donington Park, Senna delivered the greatest opening lap of all time. Starting 4th in heavy rain and dropping to 5th, he found grip where none existed, overtaking Schumacher, Wendlinger, Hill, and Prost in less than a minute to take the lead."
+    }
   }
 }

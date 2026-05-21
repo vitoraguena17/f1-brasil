@@ -61,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <LanguageProvider>
             <AudioProvider>
               <ScrollProgress />
-              <div className="px-6 md:px-12 lg:px-24 mx-auto w-full max-w-480">
+              <div className="w-full">
                 {children}
               </div>
             </AudioProvider>

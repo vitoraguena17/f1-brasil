@@ -21,13 +21,32 @@ export function DriversTimeline({ children }: { children: React.ReactNode }) {
             onLeaveBack: () => setActiveTrack(null),
             onLeave: () => setActiveTrack(null)
         });
+
+        // AJUSTADO: Linha do tempo proporcional para entrar E sair do modo escuro
+        const legacySection = document.getElementById("senna-legacy-section");
+        if (legacySection) {
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: legacySection,
+                    start: "top 70%",   // Começa o fade-in para o preto
+                    end: "bottom 30%",  // Termina o fade-out voltando para o claro
+                    scrub: true,        // Sincroniza diretamente com o movimento do mouse
+                }
+            });
+
+            tl.to(containerRef.current, { backgroundColor: "#09090b", ease: "none", duration: 1 })
+              .to({}, { duration: 6 }) // Mantém o fundo preto durante 75% do miolo da seção do legado
+              .to(containerRef.current, { backgroundColor: "#f2f2f2", ease: "none", duration: 1 });
+        }
     }, { scope: containerRef });
 
     return (
         <div ref={containerRef} className="relative w-full bg-[#f2f2f2] overflow-hidden">
-            <div className="relative z-10 max-w-350 mx-auto px-6 pt-20 pb-32">
+            <div className="relative z-10 max-w-350 mx-auto px-6 pt-20 pb-40">
+
                 <TimelineTrack />
                 <AudioPlayer />
+
                 <div className="relative z-10 w-full flex flex-col gap-32 md:gap-48">
                     {children}
                 </div>
