@@ -9,6 +9,7 @@ import { BarrichelloSection } from "@/components/timeline/barrichello-section";
 import { MassaSection } from "@/components/timeline/massa-section";
 import { BortoletoSection } from "@/components/timeline/bortoleto-section";
 import { HonorableMentions } from "@/components/timeline/honorable-mentions";
+import { Footer } from "@/components/footer/footer";
 import { DriversTimeline } from "@/components/timeline/drivers-timeline";
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
         </DriversTimeline>
         <BortoletoSection />
         <HonorableMentions />
+        <Footer />
       </main>
     </>
   );

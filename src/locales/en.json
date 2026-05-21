@@ -7,7 +7,8 @@
   },
   "ui": {
     "soundtrack": "Soundtrack",
-    "startBtn": "Enter the Track"
+    "startBtn": "Enter the Track",
+    "developedBy": "Developed by"
   },
   "fittipaldi": {
     "name": "Emerson Fittipaldi",

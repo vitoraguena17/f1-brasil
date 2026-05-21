@@ -7,7 +7,8 @@
   },
   "ui": {
     "soundtrack": "Trilha Sonora",
-    "startBtn": "Entrar na Pista"
+    "startBtn": "Entrar na Pista",
+    "developedBy": "Desenvolvido por"
   },
   "fittipaldi": {
     "name": "Emerson Fittipaldi",
