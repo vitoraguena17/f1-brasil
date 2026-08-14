@@ -12,8 +12,7 @@ export function AudioPlayer() {
   const titleRef = useRef<HTMLParagraphElement>(null);
   const artistRef = useRef<HTMLParagraphElement>(null);
   const activeTrackIdRef = useRef<string | null>(null);
-  
-  // Novas referências para animar a largura do container
+
   const textWrapperRef = useRef<HTMLDivElement>(null);
   const prevWidthRef = useRef<number>(0);
 
@@ -73,7 +72,6 @@ export function AudioPlayer() {
           stagger: 0.05,
           ease: "power2.in",
           onComplete: () => {
-            // Salva e trava a largura ANTES do texto trocar
             if (textWrapperRef.current) {
                 prevWidthRef.current = textWrapperRef.current.offsetWidth;
                 gsap.set(textWrapperRef.current, { width: prevWidthRef.current });
@@ -89,17 +87,15 @@ export function AudioPlayer() {
 
   useEffect(() => {
     if (trackInfo.title) {
-      // Se nós travamos a largura anterior, animamos ela para o novo tamanho agora
       if (textWrapperRef.current && prevWidthRef.current > 0) {
-        gsap.set(textWrapperRef.current, { width: "auto" }); // Descobre o tamanho natural da nova música
+        gsap.set(textWrapperRef.current, { width: "auto" }); 
         const naturalWidth = textWrapperRef.current.offsetWidth;
-        
-        // Faz a transição suave de tamanho e limpa o CSS depois
+      
         gsap.fromTo(textWrapperRef.current,
             { width: prevWidthRef.current },
             { width: naturalWidth, duration: 0.4, ease: "back.out(1.5)", clearProps: "width" }
         );
-        prevWidthRef.current = 0; // Reseta para não bugar
+        prevWidthRef.current = 0;
       }
 
       gsap.fromTo([titleRef.current, artistRef.current],
@@ -141,7 +137,6 @@ export function AudioPlayer() {
       <div className={`fixed bottom-4 left-4 right-4 sm:left-auto sm:right-12 sm:bottom-8 z-50 bg-[#09090b]/90 backdrop-blur-xl border border-zinc-800 rounded-2xl sm:rounded-full p-3 sm:p-2 sm:pr-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-5 transition-all duration-700 shadow-2xl ${showUI ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0 pointer-events-none'}`}>
 
         <div className="flex items-center justify-between sm:justify-start gap-3 sm:gap-4 overflow-hidden">
-          {/* Botão Play/Pause com a animação de Rotação e Escala interna */}
           <button onClick={togglePlayPause} className="relative w-10 h-10 sm:w-12 sm:h-12 shrink-0 bg-zinc-800 hover:bg-zinc-700 rounded-full flex items-center justify-center text-white transition-colors cursor-pointer overflow-hidden">
             <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ease-out ${!isPausedByUser ? 'scale-100 opacity-100 rotate-0' : 'scale-50 opacity-0 -rotate-90'}`}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zm8 0h4v16h-4z" /></svg>
