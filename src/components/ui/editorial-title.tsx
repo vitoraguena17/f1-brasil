@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { INTRO } from "@/constants/motion";
 
 gsap.registerPlugin(useGSAP);
 
@@ -11,50 +12,46 @@ interface EditorialTitleProps {
   bottomWord: string;
 }
 
+const WORD_SIZE = "text-[15.5vw] md:text-[9.5vw] lg:text-[8vw] xl:text-[7.5vw]";
+
 export function EditorialTitle({ topWord, middleWord, bottomWord }: EditorialTitleProps) {
-  const container = useRef<HTMLDivElement>(null);
-  const isFirstRender = useRef(true);
-  
+  const container = useRef<HTMLHeadingElement>(null);
+  // Marcado no onStart (e não no início do efeito) para sobreviver ao double-invoke do StrictMode
+  const introStarted = useRef(false);
+
   useGSAP(() => {
-    if (isFirstRender.current) {
+    if (!introStarted.current) {
       gsap.fromTo(".gsap-reveal",
-        { y: 120, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, stagger: 0.1, ease: "power4.out", delay: 2.4 }
+        { yPercent: 110, opacity: 0 },
+        {
+          yPercent: 0, opacity: 1, duration: 1.1, stagger: 0.1, ease: "power4.out", delay: INTRO.TITLE,
+          onStart: () => { introStarted.current = true; },
+        }
       );
-      isFirstRender.current = false;
     } else {
+      // Troca de idioma: as palavras sobem de novo dentro das máscaras
       gsap.fromTo(".gsap-reveal",
-        { opacity: 0 },
-        { opacity: 1, duration: 0.5, stagger: 0.1, ease: "power2.out" }
+        { yPercent: 60, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: 0.7, stagger: 0.08, ease: "power3.out", overwrite: true }
       );
     }
   }, { scope: container, dependencies: [topWord, middleWord, bottomWord] });
 
   return (
-    <div ref={container} className="flex flex-col items-start leading-[0.85] md:leading-[0.8] uppercase whitespace-nowrap">
-      <div className="overflow-hidden pb-2">
-        <div className="gsap-reveal">
-          <h1 className="text-[15.5vw] md:text-[9.5vw] lg:text-[8vw] xl:text-[7.5vw] opacity-30">
-            {topWord}
-          </h1>
-        </div>
-      </div>
-      <div className="flex items-baseline gap-3 md:gap-6 lg:gap-8 mt-2 md:mt-0">
-        <div className="overflow-hidden pb-4">
-          <div className="gsap-reveal">
-            <span className="block font-cursive lowercase text-3xl md:text-5xl lg:text-6xl xl:text-7xl opacity-80">
-              {middleWord}
-            </span>
-          </div>
-        </div>
-        <div className="overflow-hidden pb-2">
-          <div className="gsap-reveal">
-            <h1 className="text-[15.5vw] md:text-[9.5vw] lg:text-[8vw] xl:text-[7.5vw] opacity-95">
-              {bottomWord}
-            </h1>
-          </div>
-        </div>
-      </div>
-    </div>
+    <h1 ref={container} className="flex flex-col items-start leading-[0.85] md:leading-[0.8] uppercase whitespace-nowrap">
+      <span className="block overflow-hidden pb-2">
+        <span className={`gsap-reveal block ${WORD_SIZE} opacity-30`}>{topWord}</span>
+      </span>
+      <span className="flex items-baseline gap-3 md:gap-6 lg:gap-8 mt-2 md:mt-0">
+        <span className="block overflow-hidden pb-4">
+          <span className="gsap-reveal block font-cursive italic lowercase tracking-normal text-3xl md:text-5xl lg:text-6xl xl:text-7xl opacity-80">
+            {middleWord}
+          </span>
+        </span>
+        <span className="block overflow-hidden pb-2">
+          <span className={`gsap-reveal block ${WORD_SIZE} opacity-95`}>{bottomWord}</span>
+        </span>
+      </span>
+    </h1>
   );
 }

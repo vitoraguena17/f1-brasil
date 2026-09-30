@@ -1,13 +1,17 @@
+import type { Track } from "@/contexts/audio-context";
+
+export const TRACKS = {
+  FITTIPALDI: { id: "fittipaldi", src: "/audio/ze-roberto-lotus-72d.mp3", title: "Lotus 72D", artist: "Zé Roberto" },
+  PIQUET: { id: "piquet", src: "/audio/tema-da-vitoria.mp3", title: "Tema da Vitória", artist: "Eduardo Souto Neto" },
+  SENNA: { id: "senna", src: "/audio/the-best-tina-turner.mp3", title: "The Best", artist: "Tina Turner" },
+  SENNA_LEGACY: { id: "senna-legacy", src: "/audio/tema-vitoria-violao.mp3", title: "Tema da Vitória (Violão)", artist: "Fabio Lima" },
+  BARRICHELLO: { id: "barrichello", src: "/audio/dont-stop-me-now.mp3", title: "Don't Stop Me Now", artist: "Queen" },
+  MASSA: { id: "massa", src: "/audio/the-winner-takes-it-all.mp3", title: "The Winner Takes It All", artist: "ABBA" },
+  BORTOLETO: { id: "bortoleto", src: "/audio/just-keep-watching.mp3", title: "Just Keep Watching", artist: "Tate McRae" },
+} satisfies Record<string, Track>;
+
 export const ASSETS = {
-  AUDIO: {
-    FITTIPALDI: "/audio/ze-roberto-lotus-72d.mp3",
-    PIQUET: "/audio/tema-da-vitoria.mp3",
-    SENNA: "/audio/the-best-tina-turner.mp3",
-    SENNA_LEGACY: "/audio/tema-vitoria-funeral.mp3",
-    BARRICHELLO: "/audio/dont-stop-me-now.mp3",
-    MASSA: "/audio/the-winner-takes-it-all.mp3",
-    BORTOLETO: "/audio/just-keep-watching.mp3",
-  },
+  HERO: "/hero-image-retocada-color-semfundo.png",
 
   FITTIPALDI: {
     PROFILE: "/fittipaldi/img-fitti-profile.jpg",
@@ -43,8 +47,9 @@ export const ASSETS = {
   SENNA_LEGACY: {
     IMOLA: "/senna/img-imola.jpg",
     CORTEGO: "/senna/img-cortego.jpg",
-    INSTITUTO: "/senna/img-instituto.png",
-    SIGNATURE: "/senna/senna-signature.svg"
+    INSTITUTO: "/senna/img-instituto-logo.webp",
+    QUOTE_VIDEO: "/senna/senna-quote.mp4",
+    SIGNATURE: "/senna/senna-signature.svg",
   },
 
   BARRICHELLO: {

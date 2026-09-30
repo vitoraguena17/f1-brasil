@@ -8,9 +8,38 @@
   "ui": {
     "soundtrack": "Trilha Sonora",
     "startBtn": "Entrar na Pista",
-    "developedBy": "Desenvolvido por"
+    "developedBy": "Desenvolvido por",
+    "titles": "Títulos Mundiais",
+    "wins": "Vitórias (F1)",
+    "play": "Tocar trilha sonora",
+    "pause": "Pausar trilha sonora",
+    "volume": "Volume",
+    "switchLanguage": "Mudar idioma para inglês",
+    "backToTop": "Voltar ao topo",
+    "heroAlt": "Fittipaldi, Piquet e Senna, as lendas brasileiras da Fórmula 1",
+    "signatureAlt": "Assinatura de Ayrton Senna",
+    "logoAlt": "Logo de Vitor Aguena",
+    "poles": "Pole Positions",
+    "races": "Grandes Prêmios",
+    "soundOn": "Ativar som",
+    "soundOff": "Silenciar",
+    "replay": "Assistir de novo"
+  },
+  "about": {
+    "title": "Sobre o projeto",
+    "close": "Fechar",
+    "body": "Desenvolvido por {name} como projeto de estudo de front-end e portfólio. As vitórias dos pilotos são consumidas da API pública Jolpica (Ergast).",
+    "techTitle": "Tecnologias utilizadas",
+    "credits": "Imagens, músicas e vídeos pertencem aos seus respectivos autores e são usados sem fins comerciais, apenas como homenagem."
+  },
+  "footer": {
+    "disclaimer": "Projeto sem fins lucrativos, criado como homenagem aos pilotos brasileiros da Fórmula 1 e como estudo de desenvolvimento front-end. Todas as imagens, vídeos, músicas e marcas pertencem aos seus respectivos autores e detentores de direitos, e são utilizados apenas para fins ilustrativos e de homenagem.",
+    "contact": "Se você é titular de algum conteúdo e deseja o crédito adequado ou a remoção, {link}.",
+    "contactLink": "entre em contato",
+    "affiliation": "Este site não possui vínculo com a Fórmula 1, a FIA, equipes ou pilotos."
   },
   "fittipaldi": {
+    "label": "O Pioneiro",
     "name": "Emerson Fittipaldi",
     "nickname": "O Rato",
     "preF1": {
@@ -40,6 +69,7 @@
     }
   },
   "piquet": {
+    "label": "O Tricampeão",
     "nickname": "O Estrategista",
     "preF1": {
       "period": "1971 - 1977",
@@ -54,7 +84,7 @@
     "brabham83": {
       "period": "1983 - 1985",
       "title": "A Era Turbo e o Tema da Vitória",
-      "text": "Desenvolvendo os temidos motores BMW Turbo com Gordon Murray, Nelson moldou a lendária Brabham BT52 e sagrou-se o primeiro campeão mundial da era turbo da F1. Foi também neste ano, no GP do Brasil, que o icônico 'Tema da Vitória' tocou pela primeira vez na TV: uma ideia do narrador Galvão Bueno para eternizar os triunfos brasileiros, estreando justamente com uma vitória de Piquet."
+      "text": "Desenvolvendo os temidos motores BMW Turbo com Gordon Murray, Nelson moldou a lendária Brabham BT52 e sagrou-se o primeiro campeão mundial da era turbo da F1. Foi também neste ano, no GP do Brasil, que o icônico 'Tema da Vitória' tocou pela primeira vez na TV: uma ideia de Aloysio Legey, diretor das transmissões da Globo, para eternizar os triunfos brasileiros, estreando justamente com uma vitória de Piquet."
     },
     "williams87": {
       "period": "1986 - 1987",
@@ -73,6 +103,7 @@
     }
   },
   "senna": {
+    "label": "O Herói Nacional",
     "nickname": "Beco",
     "preF1": {
       "period": "1973 - 1983",
@@ -128,11 +159,11 @@
       "title": "Muito Além das Pistas",
       "text": "Sua grandeza não se limitava ao asfalto. Em segredo, Ayrton doava milhões para hospitais e programas de assistência. Desse desejo de transformar o país, nasceu o Instituto Ayrton Senna, que já ajudou a educar e mudar a realidade de milhões de crianças e jovens brasileiros."
     },
-    "stats": "161 GPs • 80 POLE POSITIONS • 41 VITÓRIAS",
     "goat": "Para sempre, o maior de todos os tempos.",
     "quote": "\"Seja você quem for, seja qual for a posição social que você tenha na vida, a mais alta ou a mais baixa, tenha sempre como meta muita força, muita determinação e sempre faça tudo com muito amor e com muita fé em Deus, que um dia você chega lá. De alguma maneira você chega lá.\""
   },
   "barrichello": {
+    "label": "O Resiliente",
     "nickname": "Rubinho",
     "early": {
       "period": "1993",
@@ -152,7 +183,7 @@
     "brawn": {
       "period": "2009",
       "title": "O Renascimento na Brawn GP",
-      "text": "Quando muitos achavam que sua carreira estava no fim, Rubinho renasceu com a histórica Brawn GP em 2009. Voltou a vencer, disputou o título mundial e provou sua resiliência e seu talento inquestionável como acertador de carros, estendendo sua jornada até se tornar, na época, o piloto com mais GPs disputados na história da Fórmula 1."
+      "text": "Quando muitos achavam que sua carreira estava no fim, Rubinho renasceu com a histórica Brawn GP em 2009. Voltou a vencer, disputou o título mundial e provou sua resiliência e seu talento inquestionável como acertador de carros. Àquela altura, já era o piloto com mais GPs disputados na história da Fórmula 1."
     },
     "stockcar": {
       "period": "2012 - Presente",
@@ -166,6 +197,8 @@
     }
   },
   "massa": {
+    "titlesNote": "* Campeão do mundo por cerca de 30 segundos em Interlagos, 2008.",
+    "label": "O Campeão Moral",
     "nickname": "Animal",
     "preF1": {
       "period": "1999 - 2005",
@@ -179,8 +212,8 @@
     },
     "drama2008": {
       "period": "2008",
-      "title": "15 Segundos de Campeão",
-      "text": "A temporada de 2008 foi uma montanha-russa de emoções, marcada por erros cruciais da Ferrari e pelo escandaloso 'Singapura Gate' (a batida armada da Renault que lhe custou uma vitória certa). A decisão épica aconteceu em Interlagos. Debaixo de chuva, Felipe cruzou a linha de chegada como Campeão do Mundo. Durante 15 angustiantes segundos, o Brasil comemorou, até Lewis Hamilton ultrapassar Timo Glock na última curva. Massa perdeu o título por 1 ponto, mas ganhou o respeito eterno do mundo ao bater no peito chorando no pódio."
+      "title": "Meio Minuto de Campeão",
+      "text": "A temporada de 2008 foi uma montanha-russa de emoções, marcada por erros cruciais da Ferrari e pelo escandaloso 'Singapura Gate' (a batida armada da Renault que lhe custou uma vitória certa). A decisão épica aconteceu em Interlagos. Debaixo de chuva, Felipe cruzou a linha de chegada como Campeão do Mundo. Durante cerca de 30 angustiantes segundos, o Brasil comemorou, até Lewis Hamilton ultrapassar Timo Glock na última curva. Massa perdeu o título por 1 ponto, mas ganhou o respeito eterno do mundo ao bater no peito chorando no pódio."
     },
     "mola": {
       "period": "2009",
@@ -196,21 +229,21 @@
   "bortoleto": {
     "label": "O Presente e o Futuro",
     "title": "A Nova Era do Brasil na F1",
-    "text": "Após um doloroso jejum de anos sem um piloto brasileiro titular no grid, a bandeira verde e amarela voltou a tremular forte com a chegada de Gabriel Bortoleto. Campeão da F3, protagonista absoluto na F2 e agora em seu segundo ano como titular pela Audi, Bortoleto não apenas carrega o peso de uma nação apaixonada, mas também a promessa de que a nossa dinastia no automobilismo mundial está muito longe de acabar."
+    "text": "Após um doloroso jejum de anos sem um piloto brasileiro titular no grid, a bandeira verde e amarela voltou a tremular forte com a chegada de Gabriel Bortoleto. Campeão da F3 e da F2 em anos consecutivos e agora em seu segundo ano como titular, já com as cores da Audi, Bortoleto não apenas carrega o peso de uma nação apaixonada, mas também a promessa de que a nossa dinastia no automobilismo mundial está muito longe de acabar."
   },
   "honorable": {
     "title": "As Lendas que Pavimentaram o Caminho",
-    "subtitle": "A história do Brasil na Fórmula 1 não foi escrita apenas por múltiplos vencedores. Ao todo, 32 pilotos brasileiros alinharam no grid oficial. Celebramos aqui todos aqueles que compartilharam desse sonho e deixaram sua marca no asfalto da categoria máxima do automobilismo.",
+    "subtitle": "A história do Brasil na Fórmula 1 não foi escrita apenas por múltiplos vencedores. Ao todo, 33 pilotos brasileiros alinharam no grid oficial. Celebramos aqui todos aqueles que compartilharam desse sonho e deixaram sua marca no asfalto da categoria máxima do automobilismo.",
     "drivers": {
       "landi": { "name": "Chico Landi", "desc": "O pioneiro absoluto. Primeiro brasileiro a disputar e pontuar em corridas na F1 na década de 1950." },
       "bianco": { "name": "Gino Bianco", "desc": "Correu na temporada de 1952, sendo um dos primeiros a representar o Brasil na Europa." },
-      "ramos": { "name": "Hermano da Silva Ramos", "desc": "Franco-brasileiro, o primeiro piloto nascido no Brasil a pontuar na categoria em 1956." },
+      "ramos": { "name": "Hermano da Silva Ramos", "desc": "Nascido em Paris, filho de pai brasileiro, correu com licença brasileira e marcou pontos com o 5º lugar em Mônaco, em 1956." },
       "dorey": { "name": "Fritz d'Orey", "desc": "Participou de três Grandes Prêmios na desafiadora temporada de 1959." },
       "wfittipaldi": { "name": "Wilsinho Fittipaldi", "desc": "Correu pela Brabham e foi o visionário criador da Copersucar-Fittipaldi, a primeira equipe brasileira na F1." },
       "bueno": { "name": "Luiz Bueno", "desc": "Multicampeão nacional, coroou sua carreira disputando o GP do Brasil de 1973 pela Surtees." },
       "pace": { "name": "José Carlos Pace", "desc": "O inesquecível 'Moco'. Venceu brilhantemente no Brasil (1975) e hoje dá nome ao Autódromo de Interlagos." },
       "hoffmann": { "name": "Ingo Hoffmann", "desc": "Maior campeão da Stock Car, disputou etapas na F1 pela escuderia Fittipaldi nos anos 70." },
-      "ribeiro": { "name": "Alex Ribeiro", "desc": "Ficou eternizado pelo carro com a frase 'Jesus Saves', correndo por March, Ensign e Fittipaldi." },
+      "ribeiro": { "name": "Alex Ribeiro", "desc": "Ficou eternizado pelo carro com a frase 'Jesus Saves', correndo por Hesketh, March e Fittipaldi." },
       "serra": { "name": "Chico Serra", "desc": "Lenda do automobilismo nacional, marcou pontos importantes no GP da Bélgica de 1982." },
       "boesel": { "name": "Raul Boesel", "desc": "Competiu por March e Ligier antes de construir uma trajetória vitoriosa na Indy e no Mundial de Marcas." },
       "moreno": { "name": "Roberto Moreno", "desc": "O rei da superação. Famoso 'Super Sub', conquistou um pódio histórico pela Benetton no Japão em 1990." },
@@ -219,15 +252,15 @@
       "diniz": { "name": "Pedro Diniz", "desc": "Construiu uma carreira de respeito nos anos 90, pontuando consistentemente por Ligier, Arrows e Sauber." },
       "rosset": { "name": "Ricardo Rosset", "desc": "Vice-campeão da F3000, pilotou na F1 defendendo equipes como Arrows, Lola e Tyrrell." },
       "marques": { "name": "Tarso Marques", "desc": "Mostrou seu talento pela Minardi, chegando a ser o primeiro companheiro de equipe de Fernando Alonso." },
-      "zonta": { "name": "Ricardo Zonta", "desc": "Campeão da FIA GT, teve passagens importantes como titular pela BAR e pela Toyota." },
+      "zonta": { "name": "Ricardo Zonta", "desc": "Campeão da FIA GT, foi titular pela BAR e substituto por Jordan e Toyota." },
       "burti": { "name": "Luciano Burti", "desc": "Correu por Jaguar e Prost até que um grave acidente em Spa interrompesse sua promissora carreira na F1." },
       "bernoldi": { "name": "Enrique Bernoldi", "desc": "Revelado pela Red Bull, ficou eternizado por segurar o poderoso carro de David Coulthard em Mônaco (2001)." },
       "damatta": { "name": "Cristiano da Matta", "desc": "Chegou à Toyota na F1 com status de estrela após conquistar o título da CART (Fórmula Indy) de forma dominante." },
-      "pizzonia": { "name": "Antônio Pizzonia", "desc": "O 'Jungle Boy', impressionou com sua velocidade e marcou pontos como titular e substituto pela Williams." },
+      "pizzonia": { "name": "Antônio Pizzonia", "desc": "O 'Jungle Boy', estreou como titular pela Jaguar e marcou pontos como substituto na Williams." },
       "piquetjr": { "name": "Nelson Piquet Jr.", "desc": "Herdou a velocidade do pai e conquistou um excelente 2º lugar no pódio da Alemanha em 2008 pela Renault." },
       "digrassi": { "name": "Lucas di Grassi", "desc": "Disputou temporada pela Virgin antes de se tornar um dos maiores nomes da história da Fórmula E." },
       "bsenna": { "name": "Bruno Senna", "desc": "Trouxe o peso e a emoção do lendário sobrenome de volta ao grid, correndo por HRT, Renault e Williams." },
-      "nasr": { "name": "Felipe Nasr", "desc": "Brilhou em sua estreia com a Sauber e protagonizou os pontos heroicos que salvaram a equipe Manor no Brasil em 2016." },
+      "nasr": { "name": "Felipe Nasr", "desc": "Brilhou em sua estreia com a Sauber e marcou no Brasil, em 2016, os pontos heroicos que salvaram a Sauber do último lugar entre as equipes." },
       "pfittipaldi": { "name": "Pietro Fittipaldi", "desc": "O neto de Emerson que devolveu o sobrenome à categoria, substituindo Grosjean pela Haas em duas corridas em 2020." }
     }
   }

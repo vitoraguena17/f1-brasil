@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# F1 Brasil — Lendas das Pistas
 
-## Getting Started
+Uma timeline interativa pela história dos brasileiros que venceram na Fórmula 1: Emerson Fittipaldi, Nelson Piquet, Ayrton Senna, Rubens Barrichello e Felipe Massa. Depois vêm Gabriel Bortoleto, o presente, e as menções honrosas a todos que chegaram ao grid.
 
-First, run the development server:
+Cada piloto tem sua própria trilha sonora, que troca conforme o scroll. As vitórias vêm da API [Jolpica (Ergast)](https://github.com/jolpica/jolpica-f1).
+
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router) + React 19 + TypeScript
+- [Tailwind CSS 4](https://tailwindcss.com)
+- [GSAP](https://gsap.com) + ScrollTrigger para as animações
+- [Lenis](https://lenis.darkroom.engineering) para o smooth scroll
+
+## Rodando localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                 # layout, página e estilos globais
+├── components/
+│   ├── audio/           # player da trilha sonora
+│   ├── header/
+│   ├── hero/
+│   ├── timeline/        # DriverSection, legado do Senna, Bortoleto, menções
+│   └── ui/              # cards, pista, preloader e blocos editoriais
+├── constants/
+│   ├── media.ts         # caminhos das imagens e trilhas
+│   └── motion.ts        # tempos da animação de entrada
+├── contexts/            # idioma (PT/EN) e faixa ativa
+├── data/drivers.ts      # configuração de cada piloto da timeline
+├── hooks/               # vitórias via API e trilha por seção
+└── locales/             # textos em pt.json e en.json
+```
 
-## Learn More
+### Adicionando um piloto
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Coloque as imagens em `public/<piloto>/` e registre os caminhos em `src/constants/media.ts`.
+2. Adicione a trilha em `TRACKS`, no mesmo arquivo.
+3. Crie a entrada em `src/data/drivers.ts`. Cada card aponta para uma chave de texto.
+4. Escreva os textos em `src/locales/pt.json` e `en.json`, no namespace com o `id` do piloto (`label`, `nickname` e `<card>.period|title|text`).
+5. Renderize `<DriverSection driver={DRIVERS.<id>} />` em `src/app/page.tsx`.

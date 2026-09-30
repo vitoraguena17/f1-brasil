@@ -3,14 +3,43 @@
     "titleTop": "Legends",
     "titleMiddle": "of the",
     "titleBottom": "Track",
-    "description": "Eight world titles and an entire country accelerating together. The asphalt holds the technique, bravery, and history of icons who transitioned the sport and transformed Sunday mornings into the golden era of our motorsport."
+    "description": "Eight world titles and an entire country accelerating together. The asphalt holds the technique, bravery, and history of icons who transcended the sport and transformed Sunday mornings into the golden era of our motorsport."
   },
   "ui": {
     "soundtrack": "Soundtrack",
     "startBtn": "Enter the Track",
-    "developedBy": "Developed by"
+    "developedBy": "Developed by",
+    "titles": "World Titles",
+    "wins": "F1 Wins",
+    "play": "Play soundtrack",
+    "pause": "Pause soundtrack",
+    "volume": "Volume",
+    "switchLanguage": "Switch language to Portuguese",
+    "backToTop": "Back to top",
+    "heroAlt": "Fittipaldi, Piquet and Senna, Brazil's Formula 1 legends",
+    "signatureAlt": "Ayrton Senna's signature",
+    "logoAlt": "Vitor Aguena logo",
+    "poles": "Pole Positions",
+    "races": "Grands Prix",
+    "soundOn": "Unmute",
+    "soundOff": "Mute",
+    "replay": "Watch again"
+  },
+  "about": {
+    "title": "About the project",
+    "close": "Close",
+    "body": "Built by {name} as a front-end study and portfolio project. Driver wins are fetched from the public Jolpica (Ergast) API.",
+    "techTitle": "Built with",
+    "credits": "Images, music and videos belong to their respective owners and are used non-commercially, as a tribute only."
+  },
+  "footer": {
+    "disclaimer": "A non-profit project, created as a tribute to Brazil's Formula 1 drivers and as a front-end development study. All images, videos, music and trademarks belong to their respective authors and rights holders, and are used for illustrative and tribute purposes only.",
+    "contact": "If you own any of this content and would like proper credit or its removal, {link}.",
+    "contactLink": "please get in touch",
+    "affiliation": "This website is not affiliated with Formula 1, the FIA, any team or driver."
   },
   "fittipaldi": {
+    "label": "The Pioneer",
     "name": "Emerson Fittipaldi",
     "nickname": "Emmo",
     "preF1": {
@@ -40,6 +69,7 @@
     }
   },
   "piquet": {
+    "label": "The Three-Time Champion",
     "nickname": "The Strategist",
     "preF1": {
       "period": "1971 - 1977",
@@ -54,7 +84,7 @@
     "brabham83": {
       "period": "1983 - 1985",
       "title": "The Turbo Era and the Victory Theme",
-      "text": "Developing the brutal BMW Turbo engines alongside designer Gordon Murray, Nelson shaped the legendary Brabham BT52 and became the first F1 world champion of the turbo era. It was also in this year, at the Brazilian GP, that the iconic 'Victory Theme' played for the first time on TV: an idea by broadcaster Galvão Bueno to immortalize Brazilian triumphs, debuting exactly with a Piquet victory."
+      "text": "Developing the brutal BMW Turbo engines alongside designer Gordon Murray, Nelson shaped the legendary Brabham BT52 and became the first F1 world champion of the turbo era. It was also in this year, at the Brazilian GP, that the iconic 'Victory Theme' played for the first time on TV: an idea by Aloysio Legey, Globo's F1 broadcast director, to immortalize Brazilian triumphs, debuting exactly with a Piquet victory."
     },
     "williams87": {
       "period": "1986 - 1987",
@@ -73,6 +103,7 @@
     }
   },
   "senna": {
+    "label": "The National Hero",
     "nickname": "Magic Senna",
     "preF1": {
       "period": "1973 - 1983",
@@ -128,11 +159,11 @@
       "title": "Far Beyond the Track",
       "text": "His greatness wasn't limited to the asphalt. In secret, Ayrton donated millions to hospitals and assistance programs. From this desire to transform the country, the Ayrton Senna Institute was born, which has already helped educate and change the reality of millions of Brazilian children and youth."
     },
-    "stats": "161 GPs • 80 POLE POSITIONS • 41 WINS",
     "goat": "Forever, the greatest of all time.",
     "quote": "\"Whoever you are, whatever social position you have in life, the highest or the lowest, always have as a goal a lot of strength, a lot of determination and always do everything with a lot of love and a lot of faith in God, that one day you will get there. Somehow you will get there.\""
   },
   "barrichello": {
+    "label": "The Resilient One",
     "nickname": "Rubinho",
     "early": {
       "period": "1993",
@@ -152,7 +183,7 @@
     "brawn": {
       "period": "2009",
       "title": "Rebirth at Brawn GP",
-      "text": "When many thought his career was coming to an end, Rubinho was reborn with the historic Brawn GP in 2009. He returned to winning, fought for the world title, and proved his resilience and unquestionable talent as a car setup master, extending his journey to become, at the time, the driver with the most GPs raced in Formula 1 history."
+      "text": "When many thought his career was coming to an end, Rubinho was reborn with the historic Brawn GP in 2009. He returned to winning, fought for the world title, and proved his resilience and unquestionable talent as a car setup master. By then, he was already the driver with the most GPs raced in Formula 1 history."
     },
     "stockcar": {
       "period": "2012 - Present",
@@ -166,6 +197,8 @@
     }
   },
   "massa": {
+    "titlesNote": "* World Champion for about 30 seconds at Interlagos, 2008.",
+    "label": "The Moral Champion",
     "nickname": "Animal",
     "preF1": {
       "period": "1999 - 2005",
@@ -179,8 +212,8 @@
     },
     "drama2008": {
       "period": "2008",
-      "title": "15 Seconds of a Champion",
-      "text": "The 2008 season was a rollercoaster of emotions, marked by crucial Ferrari mistakes and the scandalous 'Crashgate' (the staged Renault crash that cost him a certain victory). The epic decider took place at Interlagos. Under the rain, Felipe crossed the finish line as World Champion. For 15 agonizing seconds, Brazil celebrated, until Lewis Hamilton overtook Timo Glock on the final corner. Massa lost the title by 1 point, but earned the world's eternal respect by beating his chest in tears on the podium."
+      "title": "Champion for Half a Minute",
+      "text": "The 2008 season was a rollercoaster of emotions, marked by crucial Ferrari mistakes and the scandalous 'Crashgate' (the staged Renault crash that cost him a certain victory). The epic decider took place at Interlagos. Under the rain, Felipe crossed the finish line as World Champion. For about 30 agonizing seconds, Brazil celebrated, until Lewis Hamilton overtook Timo Glock on the final corner. Massa lost the title by 1 point, but earned the world's eternal respect by beating his chest in tears on the podium."
     },
     "mola": {
       "period": "2009",
@@ -196,21 +229,21 @@
   "bortoleto": {
     "label": "The Present and Future",
     "title": "Brazil's New Era in F1",
-    "text": "After a painful multi-year drought without a full-time Brazilian driver on the grid, the green and yellow flag waves strong again with the arrival of Gabriel Bortoleto. An F3 Champion, a dominant force in F2, and now in his second year as a full-time driver for Audi, Bortoleto carries not just the weight of a passionate nation, but the promise that our global motorsport dynasty is far from over."
+    "text": "After a painful multi-year drought without a full-time Brazilian driver on the grid, the green and yellow flag waves strong again with the arrival of Gabriel Bortoleto. F3 and F2 champion in back-to-back years and now in his second full-time season, already in Audi colors, Bortoleto carries not just the weight of a passionate nation, but the promise that our global motorsport dynasty is far from over."
   },
   "honorable": {
     "title": "The Legends Who Paved the Way",
-    "subtitle": "Brazil's history in Formula 1 wasn't written only by multiple race winners. In total, 32 Brazilian drivers have lined up on the official grid. We celebrate here all those who shared this dream and left their mark on the asphalt of motorsport's pinnacle category.",
+    "subtitle": "Brazil's history in Formula 1 wasn't written only by multiple race winners. In total, 33 Brazilian drivers have lined up on the official grid. We celebrate here all those who shared this dream and left their mark on the asphalt of motorsport's pinnacle category.",
     "drivers": {
       "landi": { "name": "Chico Landi", "desc": "The absolute pioneer. The first Brazilian to start and score points in F1 races in the 1950s." },
       "bianco": { "name": "Gino Bianco", "desc": "Raced in the 1952 season, being one of the first to represent Brazil in Europe." },
-      "ramos": { "name": "Hermano da Silva Ramos", "desc": "Franco-Brazilian, the first driver born in Brazil to score points in the category in 1956." },
+      "ramos": { "name": "Hermano da Silva Ramos", "desc": "Born in Paris to a Brazilian father, he raced under a Brazilian license and scored points with 5th place at Monaco in 1956." },
       "dorey": { "name": "Fritz d'Orey", "desc": "Participated in three Grand Prix weekends during the challenging 1959 season." },
       "wfittipaldi": { "name": "Wilsinho Fittipaldi", "desc": "Raced for Brabham and was the visionary creator of Copersucar-Fittipaldi, the first Brazilian F1 team." },
       "bueno": { "name": "Luiz Bueno", "desc": "A national multi-champion who crowned his career by entering the 1973 Brazilian GP for Surtees." },
       "pace": { "name": "José Carlos Pace", "desc": "The unforgettable 'Moco'. Won brilliantly in Brazil (1975) and today lends his name to the Interlagos Circuit." },
       "hoffmann": { "name": "Ingo Hoffmann", "desc": "Stock Car's greatest champion, he contested F1 rounds for the Fittipaldi team in the 70s." },
-      "ribeiro": { "name": "Alex Ribeiro", "desc": "Immortalized by his car featuring the phrase 'Jesus Saves', racing for March, Ensign, and Fittipaldi." },
+      "ribeiro": { "name": "Alex Ribeiro", "desc": "Immortalized by his car featuring the phrase 'Jesus Saves', racing for Hesketh, March, and Fittipaldi." },
       "serra": { "name": "Chico Serra", "desc": "A national motorsport legend, scored important points at the 1982 Belgian Grand Prix." },
       "boesel": { "name": "Raul Boesel", "desc": "Competed for March and Ligier before building a victorious career in IndyCar and World Sportscar Championship." },
       "moreno": { "name": "Roberto Moreno", "desc": "The king of resilience. The famous 'Super Sub' scored a historic podium for Benetton in Japan (1990)." },
@@ -219,15 +252,15 @@
       "diniz": { "name": "Pedro Diniz", "desc": "Built a highly respected career in the 90s, consistently scoring points for Ligier, Arrows, and Sauber." },
       "rosset": { "name": "Ricardo Rosset", "desc": "F3000 runner-up, he drove in F1 defending teams such as Arrows, Lola, and Tyrrell." },
       "marques": { "name": "Tarso Marques", "desc": "Showcased his talent at Minardi, notably becoming Fernando Alonso's very first teammate." },
-      "zonta": { "name": "Ricardo Zonta", "desc": "FIA GT Champion, had significant stints as a full-time driver for BAR and Toyota." },
+      "zonta": { "name": "Ricardo Zonta", "desc": "FIA GT Champion, raced full-time for BAR and as a stand-in for Jordan and Toyota." },
       "burti": { "name": "Luciano Burti", "desc": "Raced for Jaguar and Prost until a severe crash at Spa cut short his promising F1 career." },
       "bernoldi": { "name": "Enrique Bernoldi", "desc": "A Red Bull prospect, he is immortalized for holding off David Coulthard's powerful McLaren in Monaco (2001)." },
       "damatta": { "name": "Cristiano da Matta", "desc": "Arrived at Toyota in F1 with star status after dominantly winning the CART (IndyCar) title." },
-      "pizzonia": { "name": "Antônio Pizzonia", "desc": "The 'Jungle Boy' impressed with pure speed and scored points driving for Williams." },
+      "pizzonia": { "name": "Antônio Pizzonia", "desc": "The 'Jungle Boy' debuted full-time with Jaguar and scored points as a stand-in for Williams." },
       "piquetjr": { "name": "Nelson Piquet Jr.", "desc": "Inherited his father's speed and scored an excellent 2nd place podium in Germany (2008) for Renault." },
       "digrassi": { "name": "Lucas di Grassi", "desc": "Contested a season for Virgin before becoming one of the greatest names in Formula E history." },
       "bsenna": { "name": "Bruno Senna", "desc": "Brought the weight and emotion of the legendary surname back to the grid, racing for HRT, Renault, and Williams." },
-      "nasr": { "name": "Felipe Nasr", "desc": "Shined on his debut with Sauber and delivered heroic points that temporarily saved Manor in Brazil (2016)." },
+      "nasr": { "name": "Felipe Nasr", "desc": "Shined on his debut with Sauber and scored the heroic points in Brazil (2016) that lifted Sauber off the bottom of the constructors' table." },
       "pfittipaldi": { "name": "Pietro Fittipaldi", "desc": "Emerson's grandson who returned the surname to the category, substituting for Grosjean at Haas in late 2020." }
     }
   }

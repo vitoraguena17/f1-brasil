@@ -1,29 +1,30 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-export function TimelineTrack({ hideEnds = false }: { hideEnds?: boolean }) {
+const ZEBRA_STYLE = {
+  backgroundImage: "repeating-linear-gradient(180deg, #22c55e 0px, #22c55e 20px, #facc15 20px, #facc15 40px)",
+  backgroundSize: "100% 40px",
+  backgroundRepeat: "repeat-y",
+};
+
+const CHECKERED_STYLE = {
+  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Crect width='4' height='4' fill='%23ffffff'/%3E%3Crect x='4' y='4' width='4' height='4' fill='%23ffffff'/%3E%3C/svg%3E")`,
+  backgroundSize: "8px 8px",
+};
+
+export function TimelineTrack() {
   const trackRef = useRef<HTMLDivElement>(null);
   const carRef = useRef<HTMLDivElement>(null);
-  const zebraLeftRef = useRef<HTMLDivElement>(null);
-  const zebraRightRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!trackRef.current) return;
-    const resizeObserver = new ResizeObserver(() => {
-      ScrollTrigger.refresh();
-    });
-    resizeObserver.observe(trackRef.current);
-    return () => resizeObserver.disconnect();
-  }, []);
 
   useGSAP(() => {
+    // O carro percorre a pista acompanhando o centro da tela
     gsap.to(carRef.current, {
-      y: () => (trackRef.current ? trackRef.current.offsetHeight : 0),
+      y: () => trackRef.current?.offsetHeight ?? 0,
       ease: "none",
       scrollTrigger: {
         trigger: trackRef.current,
@@ -31,59 +32,32 @@ export function TimelineTrack({ hideEnds = false }: { hideEnds?: boolean }) {
         end: "bottom 50%",
         scrub: 1.5,
         invalidateOnRefresh: true,
-      }
+      },
     });
 
-    ScrollTrigger.create({
-      trigger: trackRef.current,
-      start: "top bottom",
-      end: "bottom top",
-      onUpdate: (self) => {
-        const offset = self.progress * 1500;
-        gsap.set([zebraLeftRef.current, zebraRightRef.current], { backgroundPosition: `0px ${offset}px` });
-      }
+    // Zebras "correm" em sentido contrário para dar sensação de velocidade
+    gsap.to(".track-zebra", {
+      backgroundPositionY: "1500px",
+      ease: "none",
+      scrollTrigger: {
+        trigger: trackRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
     });
-
-    // AJUSTADO: Timeline para aplicar e remover grayscale na pista sincronizado com o fundo
-    const legacySection = document.getElementById("senna-legacy-section");
-    if (legacySection) {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: legacySection,
-                start: "top 70%",
-                end: "bottom 30%",
-                scrub: true,
-            }
-        });
-
-        tl.to(trackRef.current, { filter: "grayscale(100%)", ease: "none", duration: 1 })
-          .to({}, { duration: 6 }) // Mantém a pista em P&B durante o miolo da seção
-          .to(trackRef.current, { filter: "grayscale(0%)", ease: "none", duration: 1 });
-    }
   }, { scope: trackRef });
 
   return (
-    <div ref={trackRef} className={`absolute left-7 md:left-1/2 top-0 bottom-0 w-12 md:w-16 md:-translate-x-1/2 flex z-0 overflow-hidden shadow-[0_0_30px_rgba(34,197,94,0.1)] bg-zinc-950 ${hideEnds ? 'rounded-none' : 'rounded-full'}`}>
+    <div ref={trackRef} className="timeline-track absolute left-4 md:left-1/2 top-0 bottom-0 w-9 md:w-16 md:-translate-x-1/2 flex z-0 overflow-hidden rounded-full shadow-[0_0_30px_rgba(34,197,94,0.1)] bg-zinc-950" aria-hidden="true">
+      <div className="track-zebra w-1.5 md:w-2.5 h-full opacity-90" style={ZEBRA_STYLE} />
 
-      <div ref={zebraLeftRef} className="w-2 md:w-2.5 h-full opacity-90"
-        style={{
-          backgroundImage: 'repeating-linear-gradient(180deg, #22c55e 0px, #22c55e 20px, #facc15 20px, #facc15 40px)',
-          backgroundSize: '100% 40px',
-          backgroundRepeat: 'repeat-y'
-        }}
-      />
+      <div className="flex-1 bg-[#121214] relative shadow-[inset_0_0_10px_rgba(0,0,0,0.8)]">
+        <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px opacity-20" style={{ backgroundImage: "repeating-linear-gradient(180deg, #ffffff 0px, #ffffff 15px, transparent 15px, transparent 30px)" }} />
 
-      <div className="flex-1 bg-[#121214] relative overflow-visible shadow-[inset_0_0_10px_rgba(0,0,0,0.8)]">
-        <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px opacity-20" style={{ backgroundImage: 'repeating-linear-gradient(180deg, #ffffff 0px, #ffffff 15px, transparent 15px, transparent 30px)' }} />
+        <div className="absolute top-0 left-0 right-0 h-3 z-10 bg-black opacity-95 shadow-md border-b border-zinc-900" style={CHECKERED_STYLE} />
 
-        {!hideEnds && (
-          <div className="absolute top-0 left-0 right-0 h-3 z-10 bg-black opacity-95 shadow-md border-b border-zinc-900" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Crect width='4' height='4' fill='%23ffffff'/%3E%3Crect x='4' y='4' width='4' height='4' fill='%23ffffff'/%3E%3C/svg%3E")`,
-            backgroundSize: '8px 8px'
-          }} />
-        )}
-
-        <div ref={carRef} className="absolute top-0 left-[calc(50%-14px)] md:left-[calc(50%-18px)] w-7 h-12 md:w-9 md:h-14 -mt-6 z-20 will-change-transform">
+        <div ref={carRef} className="absolute top-0 left-[calc(50%-10px)] md:left-[calc(50%-18px)] w-5 h-9 md:w-9 md:h-14 -mt-4 md:-mt-6 z-20 will-change-transform">
           <svg viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full drop-shadow-[0_10px_10px_rgba(0,0,0,0.8)]">
             <rect x="3" y="31.5" width="18" height="2" rx="0.5" fill="#f2f2f2" />
             <rect x="3.5" y="1.5" width="17" height="3" rx="0.5" fill="#f2f2f2" />
@@ -98,21 +72,10 @@ export function TimelineTrack({ hideEnds = false }: { hideEnds?: boolean }) {
           </svg>
         </div>
 
-        {!hideEnds && (
-          <div className="absolute bottom-0 left-0 right-0 h-3 z-10 bg-black opacity-95 shadow-md border-t border-zinc-900" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Crect width='4' height='4' fill='%23ffffff'/%3E%3Crect x='4' y='4' width='4' height='4' fill='%23ffffff'/%3E%3C/svg%3E")`,
-            backgroundSize: '8px 8px'
-          }} />
-        )}
+        <div className="absolute bottom-0 left-0 right-0 h-3 z-10 bg-black opacity-95 shadow-md border-t border-zinc-900" style={CHECKERED_STYLE} />
       </div>
 
-      <div ref={zebraRightRef} className="w-2 md:w-2.5 h-full opacity-90"
-        style={{
-          backgroundImage: 'repeating-linear-gradient(180deg, #22c55e 0px, #22c55e 20px, #facc15 20px, #facc15 40px)',
-          backgroundSize: '100% 40px',
-          backgroundRepeat: 'repeat-y'
-        }}
-      />
+      <div className="track-zebra w-1.5 md:w-2.5 h-full opacity-90" style={ZEBRA_STYLE} />
     </div>
   );
 }
