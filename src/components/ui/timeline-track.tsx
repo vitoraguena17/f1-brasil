@@ -6,11 +6,28 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const ZEBRA_STYLE = {
+const ZEBRA_PERIOD = 40;
+
+const ZEBRA_COLOR = {
   backgroundImage: "repeating-linear-gradient(180deg, #22c55e 0px, #22c55e 20px, #facc15 20px, #facc15 40px)",
-  backgroundSize: "100% 40px",
-  backgroundRepeat: "repeat-y",
+  backgroundSize: `100% ${ZEBRA_PERIOD}px`,
 };
+
+// Versão P&B equivalente ao grayscale do verde/amarelo, usada no legado do Senna
+const ZEBRA_GRAY = {
+  backgroundImage: "repeating-linear-gradient(180deg, #8f8f8f 0px, #8f8f8f 20px, #cfcfcf 20px, #cfcfcf 40px)",
+  backgroundSize: `100% ${ZEBRA_PERIOD}px`,
+};
+
+// As camadas são 1 período mais altas e deslizam só esse período: a repetição esconde o "salto"
+function Zebra() {
+  return (
+    <div className="track-zebra relative w-1.5 md:w-2.5 h-full overflow-hidden opacity-90">
+      <div className="zebra-layer absolute inset-x-0 -top-10 bottom-0 will-change-transform" style={ZEBRA_GRAY} />
+      <div className="zebra-layer zebra-color absolute inset-x-0 -top-10 bottom-0 will-change-transform" style={ZEBRA_COLOR} />
+    </div>
+  );
+}
 
 const CHECKERED_STYLE = {
   backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Crect width='4' height='4' fill='%23ffffff'/%3E%3Crect x='4' y='4' width='4' height='4' fill='%23ffffff'/%3E%3C/svg%3E")`,
@@ -35,22 +52,20 @@ export function TimelineTrack() {
       },
     });
 
-    // Zebras "correm" em sentido contrário para dar sensação de velocidade
-    gsap.to(".track-zebra", {
-      backgroundPositionY: "1500px",
-      ease: "none",
-      scrollTrigger: {
-        trigger: trackRef.current,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-      },
+    // Zebras "correm" em sentido contrário para dar sensação de velocidade.
+    // Só transform (sem repintar o fundo), o que mantém o scroll liso no celular
+    const setZebraY = gsap.quickSetter(".zebra-layer", "y", "px");
+    ScrollTrigger.create({
+      trigger: trackRef.current,
+      start: "top bottom",
+      end: "bottom top",
+      onUpdate: (self) => setZebraY((self.progress * 1500) % ZEBRA_PERIOD),
     });
   }, { scope: trackRef });
 
   return (
     <div ref={trackRef} className="timeline-track absolute left-4 md:left-1/2 top-0 bottom-0 w-9 md:w-16 md:-translate-x-1/2 flex z-0 overflow-hidden rounded-full shadow-[0_0_30px_rgba(34,197,94,0.1)] bg-zinc-950" aria-hidden="true">
-      <div className="track-zebra w-1.5 md:w-2.5 h-full opacity-90" style={ZEBRA_STYLE} />
+      <Zebra />
 
       <div className="flex-1 bg-[#121214] relative shadow-[inset_0_0_10px_rgba(0,0,0,0.8)]">
         <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px opacity-20" style={{ backgroundImage: "repeating-linear-gradient(180deg, #ffffff 0px, #ffffff 15px, transparent 15px, transparent 30px)" }} />
@@ -75,7 +90,7 @@ export function TimelineTrack() {
         <div className="absolute bottom-0 left-0 right-0 h-3 z-10 bg-black opacity-95 shadow-md border-t border-zinc-900" style={CHECKERED_STYLE} />
       </div>
 
-      <div className="track-zebra w-1.5 md:w-2.5 h-full opacity-90" style={ZEBRA_STYLE} />
+      <Zebra />
     </div>
   );
 }

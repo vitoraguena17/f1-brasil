@@ -9,9 +9,6 @@ import { LEGACY_SECTION_ID } from "./senna-legacy-section";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const LIGHT_BG = "#f2f2f2";
-const DARK_BG = "#09090b";
-
 export function DriversTimeline({ children }: { children: React.ReactNode }) {
     const containerRef = useRef<HTMLDivElement>(null);
     const setActiveTrack = useSetActiveTrack();
@@ -29,14 +26,15 @@ export function DriversTimeline({ children }: { children: React.ReactNode }) {
 
         // Escurece o fundo e tira a cor da pista durante o legado do Senna.
         // Fade de 1, platô de 6 e fade de 1: o escuro cobre ~75% do percurso da seção.
+        // Só opacidade (compositor): animar background-color/filter repintava a timeline inteira a cada quadro
         gsap.timeline({
             defaults: { ease: "none", duration: 1 },
             scrollTrigger: { trigger: legacy, start: "top 70%", end: "bottom 30%", scrub: true },
         })
-            .to(containerRef.current, { backgroundColor: DARK_BG })
-            .to(".timeline-track", { filter: "grayscale(100%)" }, "<")
-            .to(containerRef.current, { backgroundColor: LIGHT_BG }, "+=6")
-            .to(".timeline-track", { filter: "grayscale(0%)" }, "<");
+            .to(".timeline-dark", { opacity: 1 })
+            .to(".zebra-color", { opacity: 0 }, "<")
+            .to(".timeline-dark", { opacity: 0 }, "+=6")
+            .to(".zebra-color", { opacity: 1 }, "<");
 
         // Header e outros elementos fixos acompanham o tema via variante `theme-dark:`
         ScrollTrigger.create({
@@ -49,6 +47,9 @@ export function DriversTimeline({ children }: { children: React.ReactNode }) {
 
     return (
         <div ref={containerRef} className="relative w-full bg-[#f2f2f2] overflow-hidden">
+            {/* Camada escura do tamanho da tela (fixed), atrás do conteúdo da timeline */}
+            <div className="timeline-dark pointer-events-none fixed inset-0 z-0 bg-[#09090b] opacity-0" aria-hidden="true" />
+
             <div className="relative z-10 max-w-350 mx-auto px-6 pt-20 pb-40">
                 <TimelineTrack />
 

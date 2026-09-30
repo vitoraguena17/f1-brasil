@@ -53,6 +53,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR">
+      <head>
+        {/* Antes de qualquer coisa: o navegador não restaura a rolagem no reload (a jornada começa do topo) */}
+        <script dangerouslySetInnerHTML={{ __html: `try{history.scrollRestoration="manual"}catch(e){}` }} />
+      </head>
       <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
         <SmoothScroll>
           <LanguageProvider>

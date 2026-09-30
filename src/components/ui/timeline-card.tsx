@@ -6,7 +6,7 @@ export const CARD_IMAGE_SIZES = "(max-width: 768px) 100vw, (max-width: 1400px) 4
 // Inline (não a classe `grayscale`) para o GSAP conseguir interpolar o filtro
 export const GRAYSCALE = { filter: "grayscale(100%)" };
 
-export const CARD_SURFACE = "bg-white/75 backdrop-blur-xl rounded-3xl border border-zinc-200/80 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_30px_60px_-24px_rgba(0,0,0,0.22)]";
+export const CARD_SURFACE = "bg-white/80 rounded-3xl border border-zinc-200/80 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_30px_60px_-24px_rgba(0,0,0,0.22)]";
 export const IMAGE_SHADOW = "shadow-[0_2px_4px_rgba(0,0,0,0.06),0_40px_70px_-28px_rgba(0,0,0,0.5)]";
 
 export function TimelineDot() {

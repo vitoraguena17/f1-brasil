@@ -10,7 +10,7 @@
 }
 
 :root {
-  --header-h: clamp(3.5rem, 8dvh, 5rem);
+  --header-h: clamp(3.5rem, 8svh, 5rem);
 }
 
 @layer base {
@@ -51,10 +51,18 @@
 
 /* Grão de filme bem sutil sobre toda a página, para um acabamento mais editorial */
 .film-grain {
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 90;
   pointer-events: none;
   opacity: 0.05;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* No celular o grão fica desligado: é mais uma camada de tela cheia para compor a cada quadro */
+@media (min-width: 768px) {
+  .film-grain {
+    display: block;
+  }
 }

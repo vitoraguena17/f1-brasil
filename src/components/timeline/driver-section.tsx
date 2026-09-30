@@ -23,6 +23,9 @@ export function DriverSection({ driver, chapter }: { driver: Driver; chapter: nu
     useSectionTrack(sectionRef, driver.track);
 
     useGSAP(() => {
+        // Parallax só a partir do tablet: no celular ele custa caro e quase não aparece
+        const mm = gsap.matchMedia();
+
         gsap.utils.toArray<HTMLElement>(".timeline-card").forEach((card) => {
             const dot = card.querySelector(".card-dot");
             const content = card.querySelector(".card-content");
@@ -30,8 +33,15 @@ export function DriverSection({ driver, chapter }: { driver: Driver; chapter: nu
             const frame = card.querySelector(".card-frame");
             const parallax = card.querySelector(".card-parallax");
 
+            // Depois de colorida, a foto fica sem `filter` nenhum: um filter ativo (mesmo 0%) seria
+            // reprocessado a cada quadro enquanto a imagem se move por dentro no parallax
             const setColor = (color: boolean) => {
-                if (image) gsap.to(image, { filter: `grayscale(${color ? 0 : 100}%)`, duration: 0.6, ease: "power2.out", overwrite: "auto" });
+                if (!image) return;
+                if (color) {
+                    gsap.to(image, { filter: "grayscale(0%)", duration: 0.6, ease: "power2.out", overwrite: "auto", onComplete: () => gsap.set(image, { clearProps: "filter" }) });
+                } else {
+                    gsap.fromTo(image, { filter: "grayscale(0%)" }, { filter: "grayscale(100%)", duration: 0.6, ease: "power2.out", overwrite: "auto" });
+                }
             };
 
             ScrollTrigger.create({
@@ -51,14 +61,16 @@ export function DriverSection({ driver, chapter }: { driver: Driver; chapter: nu
             if (frame && parallax) {
                 // A foto se revela de baixo para cima enquanto "assenta" dentro da moldura
                 gsap.timeline({ scrollTrigger: { trigger: card, start: "top 80%" } })
-                    .fromTo(frame, { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.4, ease: "power4.inOut" })
+                    .fromTo(frame, { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.4, ease: "power4.inOut", clearProps: "clipPath" })
                     .fromTo(parallax, { scale: 1.25 }, { scale: 1, duration: 1.8, ease: "power3.out" }, "<");
 
                 // Parallax: a foto desliza mais devagar que a página
-                gsap.fromTo(parallax, { yPercent: -6 }, {
-                    yPercent: 6,
-                    ease: "none",
-                    scrollTrigger: { trigger: card, start: "top bottom", end: "bottom top", scrub: true },
+                mm.add("(min-width: 768px)", () => {
+                    gsap.fromTo(parallax, { yPercent: -6 }, {
+                        yPercent: 6,
+                        ease: "none",
+                        scrollTrigger: { trigger: card, start: "top bottom", end: "bottom top", scrub: true },
+                    });
                 });
             }
 
@@ -71,6 +83,8 @@ export function DriverSection({ driver, chapter }: { driver: Driver; chapter: nu
                 ease: "power3.out",
             });
         });
+
+        return () => mm.revert();
     }, { scope: sectionRef });
 
     const ns = driver.id;

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLenis } from "lenis/react";
 import { EditorialTitle } from "../ui/editorial-title";
 import { EditorialImage } from "../ui/editorial-image";
@@ -13,25 +13,46 @@ export function HeroSection() {
   const { t } = useLanguage();
   const lenis = useLenis();
 
-  // A jornada sempre começa do topo e o scroll fica travado até o clique em "Entrar na Pista".
-  // Esse clique também é a interação que libera o autoplay das trilhas no navegador.
+  // Fica true até o clique em "Entrar na Pista"
+  const isLockedRef = useRef(true);
+
   useEffect(() => {
     history.scrollRestoration = "manual";
     window.scrollTo(0, 0);
+  }, []);
 
-    if (lenis) {
-      lenis.scrollTo(0, { immediate: true });
-      lenis.stop();
-    }
+  // A jornada sempre começa do topo e o scroll fica travado até o clique em "Entrar na Pista".
+  // Esse clique também é a interação que libera o autoplay das trilhas no navegador.
+  useEffect(() => {
+    if (!lenis) return;
+
+    const goToTop = () => {
+      window.scrollTo(0, 0);
+      lenis.scrollTo(0, { immediate: true, force: true });
+    };
+
+    goToTop();
+    lenis.stop();
+
+    // Rede de segurança: se o navegador restaurar a rolagem depois de montarmos (reload no meio
+    // da página, voltar pelo histórico), a página ficaria travada longe do botão que a destrava
+    const keepAtTop = () => {
+      if (isLockedRef.current && window.scrollY > 0) goToTop();
+    };
+    window.addEventListener("scroll", keepAtTop, { passive: true });
+    window.addEventListener("pageshow", keepAtTop);
 
     return () => {
-      lenis?.start();
+      window.removeEventListener("scroll", keepAtTop);
+      window.removeEventListener("pageshow", keepAtTop);
+      lenis.start();
     };
   }, [lenis]);
 
   const handleStartJourney = () => {
     if (!lenis) return;
 
+    isLockedRef.current = false;
     lenis.start();
     lenis.scrollTo("#fittipaldi-section", {
       duration: 1.8,
@@ -42,7 +63,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="w-full h-dvh overflow-hidden flex flex-col justify-center relative pt-[calc(var(--header-h)+3dvh)] pb-20 md:pb-16 px-6 md:px-12 lg:px-24">
+    <section className="w-full h-svh overflow-hidden flex flex-col justify-center relative pt-[calc(var(--header-h)+3svh)] pb-20 md:pb-16 px-6 md:px-12 lg:px-24">
       <div className="flex flex-col md:grid md:grid-cols-12 items-start w-full h-full">
         <div className="md:col-start-1 md:col-end-11 md:row-start-1 z-10 flex flex-col md:justify-between h-auto md:h-full pointer-events-none shrink-0">
 
