@@ -31,6 +31,9 @@ export function SennaQuoteVideo({ src, quote }: SennaQuoteVideoProps) {
     const [aspectRatio, setAspectRatio] = useState(16 / 9);
     // Começa tentando com som; só silencia se o navegador bloquear ou o usuário pedir
     const isMutedRef = useRef(false);
+    // Intenção atual (tocar ou não). O play() é assíncrono: numa rolagem rápida o vídeo pode
+    // "sair da tela" antes de começar a tocar, e sem essa checagem ele seguia tocando fora da seção
+    const wantsPlayRef = useRef(false);
 
     const setMuted = (muted: boolean) => {
         isMutedRef.current = muted;
@@ -60,23 +63,41 @@ export function SennaQuoteVideo({ src, quote }: SennaQuoteVideoProps) {
         if (!video) return;
         if (video.ended) video.currentTime = 0;
 
+        wantsPlayRef.current = true;
         video.muted = isMutedRef.current;
         video.volume = 0;
+
+        const onStarted = () => {
+            if (!wantsPlayRef.current) {
+                video.pause();
+                return;
+            }
+            gsap.to(video, { volume: 1, duration: 1, ease: "power1.in", overwrite: true });
+        };
+
         video.play()
-            .then(() => gsap.to(video, { volume: 1, duration: 1, ease: "power1.in", overwrite: true }))
+            .then(onStarted)
             .catch((error: DOMException) => {
                 // Sem interação prévia o autoplay com som é bloqueado: toca mudo e oferece o botão de som
-                if (error.name === "NotAllowedError" && !video.muted) {
+                if (error.name === "NotAllowedError" && !video.muted && wantsPlayRef.current) {
                     setMuted(true);
-                    video.play().catch(() => { });
+                    video.play().then(onStarted).catch(() => { });
                 }
             });
     };
 
     const pause = () => {
         const video = videoRef.current;
-        if (!video || video.paused) return;
-        gsap.to(video, { volume: 0, duration: 0.5, ease: "power1.out", overwrite: true, onComplete: () => video.pause() });
+        if (!video) return;
+        wantsPlayRef.current = false;
+        if (video.paused) return;
+        gsap.to(video, {
+            volume: 0,
+            duration: 0.5,
+            ease: "power1.out",
+            overwrite: true,
+            onComplete: () => { if (!wantsPlayRef.current) video.pause(); },
+        });
     };
 
     useGSAP(() => {

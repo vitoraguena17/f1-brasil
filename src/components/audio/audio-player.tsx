@@ -21,6 +21,10 @@ export function AudioPlayer() {
   const titleRef = useRef<HTMLParagraphElement>(null);
   const artistRef = useRef<HTMLParagraphElement>(null);
   const loadedTrackIdRef = useRef<string | null>(null);
+  // Faixa desejada no momento; lida quando um play() assíncrono termina de carregar
+  const activeTrackRef = useRef<Track | null>(null);
+  // true durante o fade-out que antecede a troca de src
+  const isSwappingRef = useRef(false);
 
   // Faixa exibida na UI (troca só depois da animação de saída do texto anterior)
   const [displayedTrack, setDisplayedTrack] = useState<Track | null>(null);
@@ -43,7 +47,15 @@ export function AudioPlayer() {
 
   const fadeIn = (audio: HTMLAudioElement, duration: number) => {
     audio.play()
-      .then(() => gsap.to(audio, { volume: targetVolume(), duration, ease: "power1.in", overwrite: true }))
+      .then(() => {
+        // Numa rolagem rápida a seção pode ter saído da tela antes do play() começar:
+        // sem essa checagem o fade-in cancelava a pausa e a música seguia tocando fora de lugar
+        if (!activeTrackRef.current || isPausedRef.current) {
+          audio.pause();
+          return;
+        }
+        gsap.to(audio, { volume: targetVolume(), duration, ease: "power1.in", overwrite: true });
+      })
       .catch((error: DOMException) => {
         // Sem interação prévia o navegador bloqueia o autoplay: mostra o botão de play
         if (error.name === "NotAllowedError") setPaused(true);
@@ -54,10 +66,12 @@ export function AudioPlayer() {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
+    activeTrackRef.current = activeTrack;
+    isSwappingRef.current = false;
     gsap.killTweensOf(audio);
 
     if (!activeTrack) {
-      gsap.to(audio, { volume: 0, duration: 0.8, ease: "power1.out", onComplete: () => audio.pause() });
+      gsap.to(audio, { volume: 0, duration: 0.8, ease: "power1.out", onComplete: () => { if (!activeTrackRef.current) audio.pause(); } });
       return;
     }
 
@@ -68,11 +82,13 @@ export function AudioPlayer() {
     }
 
     loadedTrackIdRef.current = activeTrack.id;
+    isSwappingRef.current = true;
     gsap.to(audio, {
       volume: 0,
       duration: 0.4,
       ease: "power1.out",
       onComplete: () => {
+        isSwappingRef.current = false;
         audio.src = activeTrack.src;
         if (!isPausedRef.current) fadeIn(audio, 1.5);
       },
@@ -99,7 +115,10 @@ export function AudioPlayer() {
   useEffect(() => {
     isDuckedRef.current = isDucked;
     const audio = audioRef.current;
-    if (!audio || audio.paused || isPausedRef.current) return;
+    // Só mexe no volume de uma faixa ativa já tocando. Durante uma troca ou um fade-out para parar,
+    // o overwrite cancelaria esses tweens (a faixa não trocava ou a música não parava);
+    // nesses casos o próprio fade-in já usa targetVolume(), que lê isDuckedRef
+    if (!audio || audio.paused || isPausedRef.current || !activeTrackRef.current || isSwappingRef.current) return;
     gsap.to(audio, { volume: targetVolume(), duration: isDucked ? 0.6 : 1.2, ease: "power1.inOut", overwrite: true });
      
   }, [isDucked]);
