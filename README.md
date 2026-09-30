@@ -80,14 +80,6 @@ npm run dev
 
 Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
-### Adicionando um piloto
-
-1. Coloque as imagens em `public/<piloto>/` e registre os caminhos em `src/constants/media.ts`.
-2. Adicione a trilha em `TRACKS`, no mesmo arquivo.
-3. Crie a entrada em `src/data/drivers.ts`, apontando cada card para uma chave de texto.
-4. Escreva os textos em `src/locales/pt.json` e `en.json`, no namespace com o `id` do piloto.
-5. Renderize `<DriverSection driver={DRIVERS.<id>} chapter={n} />` em `src/app/page.tsx`.
-
 ---
 
 ## ⚖️ Direitos Autorais
