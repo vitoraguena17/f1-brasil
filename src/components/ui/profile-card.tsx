@@ -31,15 +31,16 @@ export function ProfileCard({ chapter, label, firstName, lastName, nickname, ima
                 src={imageSrc}
                 alt={`${firstName} ${lastName}`}
                 objectPosition="object-top"
-                className="w-full md:w-[45%] h-96 sm:h-112 lg:h-150 order-2 md:order-1"
+                className="w-full md:w-[45%] aspect-4/3 md:aspect-auto md:h-125 lg:h-150 order-2 md:order-1"
             >
                 <PhotoCaption chips={teams} aside={era} />
             </CardImage>
 
             <div className="card-content relative order-1 md:order-2 w-full md:w-[45%] flex flex-col justify-center">
-                {/* Número do capítulo vazado ao fundo, como o número do carro no "Agora" */}
+                {/* Número do capítulo vazado, como o número do carro no "Agora": no celular fica acima do rótulo
+                    (não há largura para os dois lado a lado); a partir do tablet vai para o fundo, à direita */}
                 <span
-                    className="card-reveal card-year absolute -top-10 md:-top-20 right-0 text-[8rem] md:text-[10rem] lg:text-[13rem] font-bold italic leading-none text-transparent select-none pointer-events-none"
+                    className="card-reveal card-year block md:absolute md:-top-20 md:right-0 mb-3 md:mb-0 text-[6.5rem] md:text-[10rem] lg:text-[13rem] font-bold italic leading-[0.8] md:leading-none text-transparent select-none pointer-events-none"
                     style={OUTLINE_NUMERAL}
                     aria-hidden="true"
                 >

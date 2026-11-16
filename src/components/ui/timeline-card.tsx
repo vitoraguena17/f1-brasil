@@ -45,7 +45,8 @@ export function CardImage({ src, alt, className = "", objectPosition = "object-c
   return (
     <div className={`card-reveal card-image relative rounded-3xl ${IMAGE_SHADOW} ${className}`} style={GRAYSCALE}>
       <div className="card-frame relative w-full h-full rounded-3xl overflow-hidden">
-        <div className="card-parallax absolute inset-x-0 -inset-y-[8%]">
+        {/* A sobra de 8% só existe onde há parallax (md+); no celular ela só cortava mais a foto */}
+        <div className="card-parallax absolute inset-x-0 inset-y-0 md:-inset-y-[8%]">
           <Image
             src={src}
             alt={alt}
@@ -95,7 +96,7 @@ export function TimelineCard({ alignment, period, title, text, imageSrc, index }
         <CardImage
           src={imageSrc}
           alt={title}
-          className={`w-full md:w-[45%] h-72 sm:h-80 lg:h-112 ${isRight ? "md:order-1" : "md:order-2"}`}
+          className={`w-full md:w-[45%] aspect-3/2 ${isRight ? "md:order-1" : "md:order-2"}`}
         >
           <PhotoCaption chips={[index]} />
         </CardImage>
