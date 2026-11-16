@@ -84,7 +84,7 @@ Abra [http://localhost:3000](http://localhost:3000) no navegador.
 
 ## ⚖️ Direitos Autorais
 
-Projeto sem fins lucrativos, criado como homenagem aos pilotos brasileiros e como estudo de desenvolvimento front-end. Imagens, vídeos, músicas e marcas pertencem aos seus respectivos autores e detentores de direitos. Se você é titular de algum conteúdo e deseja crédito ou remoção, [entre em contato](https://vitoraguena17.github.io/Personal-Portfolio/#contato).
+Projeto sem fins lucrativos, criado como homenagem aos pilotos brasileiros e como estudo de desenvolvimento front-end. Imagens, vídeos, músicas e marcas pertencem aos seus respectivos autores e detentores de direitos. Se você é titular de algum conteúdo e deseja crédito ou remoção, [entre em contato](https://vitoraguena.pages.dev/#contact).
 
 Este projeto não possui vínculo com a Fórmula 1, a FIA, equipes ou pilotos.
 
@@ -93,5 +93,5 @@ Este projeto não possui vínculo com a Fórmula 1, a FIA, equipes ou pilotos.
 ## 👤 Autor
 
 **Vitor Aguena**
-- 🌐 [Portfólio](https://vitoraguena17.github.io/Personal-Portfolio/)
+- 🌐 [Portfólio](https://vitoraguena.pages.dev/)
 - 💼 [LinkedIn](https://www.linkedin.com/in/vitoraguena/)

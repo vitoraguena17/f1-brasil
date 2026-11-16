@@ -2,7 +2,7 @@
 import { useLanguage } from "@/contexts/language-context";
 
 const POPOVER_ID = "about-popover";
-const PORTFOLIO_URL = "https://vitoraguena17.github.io/Personal-Portfolio/";
+const PORTFOLIO_URL = "https://vitoraguena.pages.dev/";
 const TECHNOLOGIES = ["Next.js", "React", "TypeScript", "Tailwind CSS", "GSAP", "Lenis"];
 
 /**

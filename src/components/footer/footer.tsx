@@ -2,8 +2,8 @@
 import Image from "next/image";
 import { useLanguage } from "@/contexts/language-context";
 
-const PORTFOLIO_URL = "https://vitoraguena17.github.io/Personal-Portfolio/";
-const CONTACT_URL = `${PORTFOLIO_URL}#contato`;
+const PORTFOLIO_URL = "https://vitoraguena.pages.dev/";
+const CONTACT_URL = `${PORTFOLIO_URL}#contact`;
 
 export function Footer() {
   const { t } = useLanguage();
