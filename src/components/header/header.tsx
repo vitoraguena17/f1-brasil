@@ -30,7 +30,7 @@ export function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 left-0 w-full h-(--header-h) z-50 flex items-center justify-between px-6 md:px-12 lg:px-24 bg-[#f2f2f2]/80 text-zinc-900 backdrop-blur-md border-b border-zinc-200/50 transition-colors duration-500 theme-dark:bg-zinc-950/70 theme-dark:text-zinc-100 theme-dark:border-zinc-800/60"
+      className="fixed top-0 left-0 w-full h-(--header-h) z-50 flex items-center justify-between px-6 md:px-12 lg:px-24 bg-[#f2f2f2]/80 text-zinc-900 backdrop-blur-md border-b border-zinc-200/50 transition-colors duration-500 theme-dark:bg-zinc-950/70 theme-dark:text-zinc-100 theme-dark:border-zinc-800/60 theme-night:bg-[#060a12]/80 theme-night:border-white/10"
     >
       <button type="button" onClick={() => lenis?.scrollTo(0, { duration: 1.5 })} aria-label={t("ui.backToTop")} className="gsap-header-item cursor-pointer">
         <F1Logo />

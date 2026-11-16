@@ -39,8 +39,9 @@ A página conta a história em capítulos, do pioneirismo ao presente:
 | 03 | **Ayrton Senna** | O herói nacional, seguido de uma seção dedicada ao seu legado |
 | 04 | **Rubens Barrichello** | A resiliência, a Ferrari e o renascimento na Brawn GP |
 | 05 | **Felipe Massa** | O campeão moral de Interlagos 2008 |
+| 06 | **Gabriel Bortoleto** e **Rafael Câmara** | O Brasil de volta com dois pilotos no grid, com dados ao vivo da temporada |
 
-Depois vêm **Gabriel Bortoleto**, o presente e o futuro do Brasil no grid, e uma homenagem aos **33 brasileiros** que já disputaram a categoria.
+No fim, uma homenagem aos **34 brasileiros** que já disputaram a categoria.
 
 ---
 

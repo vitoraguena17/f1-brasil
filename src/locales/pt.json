@@ -20,6 +20,8 @@
     "signatureAlt": "Assinatura de Ayrton Senna",
     "logoAlt": "Logo de Vitor Aguena",
     "poles": "Pole Positions",
+    "podiums": "Pódios",
+    "chapter": "Capítulo",
     "races": "Grandes Prêmios",
     "soundOn": "Ativar som",
     "soundOff": "Silenciar",
@@ -226,14 +228,89 @@
       "text": "Após uma emocionante despedida da F1 pela Williams, Felipe não conseguiu abandonar o asfalto. Competiu na Fórmula E e, eventualmente, encontrou seu lugar na Stock Car Brasil. Dividindo curvas com antigos rivais e amigos, ele segue mostrando que a paixão por acelerar no seu país natal e sua competitividade inata são maiores que qualquer obstáculo."
     }
   },
-  "bortoleto": {
-    "label": "O Presente e o Futuro",
-    "title": "A Nova Era do Brasil na F1",
-    "text": "Após um doloroso jejum de anos sem um piloto brasileiro titular no grid, a bandeira verde e amarela voltou a tremular forte com a chegada de Gabriel Bortoleto. Campeão da F3 e da F2 em anos consecutivos e agora em seu segundo ano como titular, já com as cores da Audi, Bortoleto não apenas carrega o peso de uma nação apaixonada, mas também a promessa de que a nossa dinastia no automobilismo mundial está muito longe de acabar."
+  "now": {
+    "label": "Capítulo 06 · Agora",
+    "live": "Ao vivo",
+    "titleTop": "O Brasil acelera",
+    "titleAccent": "agora.",
+    "intro": "Em 8 de novembro de 2026, Interlagos viu algo que não acontecia desde 2016: dois brasileiros no grid da Fórmula 1. De um lado, Gabriel Bortoleto, em seu segundo ano e já com as cores da Audi. Do outro, Rafael Câmara, que estreou em casa pela Haas. As lendas abriram o caminho. Agora, a história está sendo escrita ao vivo.",
+    "liveNote": "Atualizado automaticamente pela API Jolpica (Ergast) · Temporada",
+    "stats": {
+      "position": "Campeonato",
+      "points": "Pontos na temporada",
+      "bestFinish": "Melhor resultado",
+      "bestGrid": "Melhor largada",
+      "starts": "GPs na F1",
+      "juniorTitles": "Títulos na base",
+      "fullTimeFrom": "Titular a partir de"
+    },
+    "bortoleto": {
+      "label": "O Presente",
+      "team": "Audi · #5",
+      "status": "2º ano na F1",
+      "tagline": "De Osasco para o mundo",
+      "text": "Campeão da F3 e da F2 em anos seguidos, as duas vezes como estreante, Gabriel Bortoleto encerrou um jejum de sete temporadas sem um brasileiro titular no grid. Em 2026, no seu segundo ano, viu a Sauber virar Audi, uma equipe de fábrica com motor próprio, e se tornou peça central do projeto alemão na nova era da Fórmula 1.",
+      "milestones": {
+        "f3": {
+          "year": "2023",
+          "title": "Campeão da Fórmula 3",
+          "text": "Título logo no ano de estreia, pela Trident."
+        },
+        "f2": {
+          "year": "2024",
+          "title": "Campeão da Fórmula 2",
+          "text": "Mais um título como estreante, agora pela Invicta, decidido na última etapa, em Abu Dhabi."
+        },
+        "rookie": {
+          "year": "2025",
+          "title": "Estreia na F1 pela Sauber",
+          "text": "Fim de sete temporadas sem um brasileiro titular. Fechou o ano de estreia com 19 pontos."
+        },
+        "audi": {
+          "year": "2026",
+          "title": "A era Audi",
+          "text": "Segundo ano, agora com a Audi como equipe de fábrica. Pontos na Austrália, em Silverstone, em Spa e na Cidade do México."
+        }
+      }
+    },
+    "camara": {
+      "label": "O Futuro",
+      "team": "Haas · #51",
+      "status": "Titular em 2027",
+      "tagline": "De Recife para o grid",
+      "text": "Pernambucano de Recife e integrante da Ferrari Driver Academy desde os 16 anos, Rafael Câmara chegou à Fórmula 1 empilhando títulos nas categorias de base. Já anunciado como titular da Haas para 2027, ganhou a chance antes da hora e estreou justamente em casa, em Interlagos, enquanto ainda briga pelo título da Fórmula 2.",
+      "milestones": {
+        "freca": {
+          "year": "2024",
+          "title": "Campeão da Fórmula Regional Europeia",
+          "text": "Sete vitórias e recorde de pontos na categoria, pela Prema."
+        },
+        "f3": {
+          "year": "2025",
+          "title": "Campeão da Fórmula 3",
+          "text": "O mesmo título que Bortoleto havia conquistado dois anos antes."
+        },
+        "f2": {
+          "year": "2026",
+          "title": "Fórmula 2 pela Invicta",
+          "text": "Na briga pelo título com a mesma equipe que levou Bortoleto à taça em 2024."
+        },
+        "debut": {
+          "year": "2026",
+          "title": "Estreia em Interlagos",
+          "text": "Chamado às pressas no lugar de Esteban Ocon, largou em 11º no GP de São Paulo, diante da torcida brasileira."
+        },
+        "haas": {
+          "year": "2027",
+          "title": "Titular da Haas",
+          "text": "Contrato de vários anos, ao lado de Oliver Bearman."
+        }
+      }
+    }
   },
   "honorable": {
     "title": "As Lendas que Pavimentaram o Caminho",
-    "subtitle": "A história do Brasil na Fórmula 1 não foi escrita apenas por múltiplos vencedores. Ao todo, 33 pilotos brasileiros alinharam no grid oficial. Celebramos aqui todos aqueles que compartilharam desse sonho e deixaram sua marca no asfalto da categoria máxima do automobilismo.",
+    "subtitle": "A história do Brasil na Fórmula 1 não foi escrita apenas por múltiplos vencedores. Ao todo, 34 pilotos brasileiros alinharam no grid oficial. Celebramos aqui todos aqueles que compartilharam desse sonho e deixaram sua marca no asfalto da categoria máxima do automobilismo.",
     "drivers": {
       "landi": { "name": "Chico Landi", "desc": "O pioneiro absoluto. Primeiro brasileiro a disputar e pontuar em corridas na F1 na década de 1950." },
       "bianco": { "name": "Gino Bianco", "desc": "Correu na temporada de 1952, sendo um dos primeiros a representar o Brasil na Europa." },

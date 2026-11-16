@@ -8,6 +8,7 @@ export const TRACKS = {
   BARRICHELLO: { id: "barrichello", src: "/audio/dont-stop-me-now.mp3", title: "Don't Stop Me Now", artist: "Queen" },
   MASSA: { id: "massa", src: "/audio/the-winner-takes-it-all.mp3", title: "The Winner Takes It All", artist: "ABBA" },
   BORTOLETO: { id: "bortoleto", src: "/audio/just-keep-watching.mp3", title: "Just Keep Watching", artist: "Tate McRae" },
+  CAMARA: { id: "camara", src: "/audio/piloto-joao-gomes.mp3", title: "Piloto", artist: "João Gomes" },
 } satisfies Record<string, Track>;
 
 export const ASSETS = {
@@ -73,5 +74,9 @@ export const ASSETS = {
 
   BORTOLETO: {
     HERO: "/bortoleto/img-bortoleto-profile.webp",
+  },
+
+  CAMARA: {
+    HERO: "/camara/img-camara-profile.webp",
   },
 };

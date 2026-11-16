@@ -20,6 +20,8 @@
     "signatureAlt": "Ayrton Senna's signature",
     "logoAlt": "Vitor Aguena logo",
     "poles": "Pole Positions",
+    "podiums": "Podiums",
+    "chapter": "Chapter",
     "races": "Grands Prix",
     "soundOn": "Unmute",
     "soundOff": "Mute",
@@ -226,14 +228,89 @@
       "text": "After an emotional farewell to F1 with Williams, Felipe couldn't leave the asphalt behind. He competed in Formula E and eventually found his place in Stock Car Brasil. Sharing corners with old rivals and friends, he continues to show that the passion for racing in his home country and his innate competitiveness are greater than any obstacle."
     }
   },
-  "bortoleto": {
-    "label": "The Present and Future",
-    "title": "Brazil's New Era in F1",
-    "text": "After a painful multi-year drought without a full-time Brazilian driver on the grid, the green and yellow flag waves strong again with the arrival of Gabriel Bortoleto. F3 and F2 champion in back-to-back years and now in his second full-time season, already in Audi colors, Bortoleto carries not just the weight of a passionate nation, but the promise that our global motorsport dynasty is far from over."
+  "now": {
+    "label": "Chapter 06 · Now",
+    "live": "Live",
+    "titleTop": "Brazil is racing",
+    "titleAccent": "right now.",
+    "intro": "On November 8, 2026, Interlagos saw something that hadn't happened since 2016: two Brazilians on the Formula 1 grid. On one side, Gabriel Bortoleto, in his second season and already in Audi colors. On the other, Rafael Câmara, who made his debut at home with Haas. The legends paved the way. Now the story is being written live.",
+    "liveNote": "Updated automatically from the Jolpica (Ergast) API · Season",
+    "stats": {
+      "position": "Championship",
+      "points": "Season points",
+      "bestFinish": "Best finish",
+      "bestGrid": "Best grid slot",
+      "starts": "F1 Grands Prix",
+      "juniorTitles": "Junior titles",
+      "fullTimeFrom": "Full-time from"
+    },
+    "bortoleto": {
+      "label": "The Present",
+      "team": "Audi · #5",
+      "status": "2nd F1 season",
+      "tagline": "From Osasco to the world",
+      "text": "F3 and F2 champion in back-to-back years, both times as a rookie, Gabriel Bortoleto ended a seven-season drought without a full-time Brazilian on the grid. In 2026, his second season, he watched Sauber become Audi, a works team with its own engine, and became a central piece of the German project in Formula 1's new era.",
+      "milestones": {
+        "f3": {
+          "year": "2023",
+          "title": "Formula 3 Champion",
+          "text": "Title in his very first season, with Trident."
+        },
+        "f2": {
+          "year": "2024",
+          "title": "Formula 2 Champion",
+          "text": "Another rookie title, this time with Invicta, decided at the final round in Abu Dhabi."
+        },
+        "rookie": {
+          "year": "2025",
+          "title": "F1 debut with Sauber",
+          "text": "The end of seven seasons without a full-time Brazilian. He closed his rookie year with 19 points."
+        },
+        "audi": {
+          "year": "2026",
+          "title": "The Audi era",
+          "text": "Second season, now with Audi as a works team. Points in Australia, Silverstone, Spa and Mexico City."
+        }
+      }
+    },
+    "camara": {
+      "label": "The Future",
+      "team": "Haas · #51",
+      "status": "Full-time in 2027",
+      "tagline": "From Recife to the grid",
+      "text": "Born in Recife and a Ferrari Driver Academy member since age 16, Rafael Câmara reached Formula 1 stacking junior titles. Already announced as a full-time Haas driver for 2027, he got his chance early and debuted right at home, at Interlagos, while still fighting for the Formula 2 title.",
+      "milestones": {
+        "freca": {
+          "year": "2024",
+          "title": "Formula Regional European Champion",
+          "text": "Seven wins and a series points record, with Prema."
+        },
+        "f3": {
+          "year": "2025",
+          "title": "Formula 3 Champion",
+          "text": "The same title Bortoleto had won two years earlier."
+        },
+        "f2": {
+          "year": "2026",
+          "title": "Formula 2 with Invicta",
+          "text": "Fighting for the title with the same team that took Bortoleto to the crown in 2024."
+        },
+        "debut": {
+          "year": "2026",
+          "title": "Interlagos debut",
+          "text": "Called up at short notice to replace Esteban Ocon, he started 11th at the São Paulo Grand Prix in front of the home crowd."
+        },
+        "haas": {
+          "year": "2027",
+          "title": "Full-time Haas driver",
+          "text": "A multi-year deal, alongside Oliver Bearman."
+        }
+      }
+    }
   },
   "honorable": {
     "title": "The Legends Who Paved the Way",
-    "subtitle": "Brazil's history in Formula 1 wasn't written only by multiple race winners. In total, 33 Brazilian drivers have lined up on the official grid. We celebrate here all those who shared this dream and left their mark on the asphalt of motorsport's pinnacle category.",
+    "subtitle": "Brazil's history in Formula 1 wasn't written only by multiple race winners. In total, 34 Brazilian drivers have lined up on the official grid. We celebrate here all those who shared this dream and left their mark on the asphalt of motorsport's pinnacle category.",
     "drivers": {
       "landi": { "name": "Chico Landi", "desc": "The absolute pioneer. The first Brazilian to start and score points in F1 races in the 1950s." },
       "bianco": { "name": "Gino Bianco", "desc": "Raced in the 1952 season, being one of the first to represent Brazil in Europe." },

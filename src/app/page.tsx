@@ -4,7 +4,7 @@ import { Preloader } from "@/components/ui/preloader";
 import { DriversTimeline } from "@/components/timeline/drivers-timeline";
 import { DriverSection } from "@/components/timeline/driver-section";
 import { SennaLegacySection } from "@/components/timeline/senna-legacy-section";
-import { BortoletoSection } from "@/components/timeline/bortoleto-section";
+import { NowSection } from "@/components/timeline/now-section";
 import { HonorableMentions } from "@/components/timeline/honorable-mentions";
 import { Footer } from "@/components/footer/footer";
 import { DRIVERS } from "@/data/drivers";
@@ -24,7 +24,7 @@ export default function Home() {
           <DriverSection driver={DRIVERS.barrichello} chapter={4} />
           <DriverSection driver={DRIVERS.massa} chapter={5} />
         </DriversTimeline>
-        <BortoletoSection />
+        <NowSection />
         <HonorableMentions />
       </main>
       <Footer />

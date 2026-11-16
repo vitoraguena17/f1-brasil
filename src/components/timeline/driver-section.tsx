@@ -12,8 +12,9 @@ import { TimelineCard } from "../ui/timeline-card";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const ACTIVE_BORDER = "rgba(34,197,94,0.4)";
-const IDLE_BORDER = "rgba(228,228,231,0.8)";
+// Contorno dos numerais vazados: cinza em repouso, verde enquanto o card cruza o centro da tela
+const ACTIVE_STROKE = "#22c55e";
+const IDLE_STROKE = "#d4d4d8";
 
 export function DriverSection({ driver, chapter }: { driver: Driver; chapter: number }) {
     const { t } = useLanguage();
@@ -28,7 +29,7 @@ export function DriverSection({ driver, chapter }: { driver: Driver; chapter: nu
 
         gsap.utils.toArray<HTMLElement>(".timeline-card").forEach((card) => {
             const dot = card.querySelector(".card-dot");
-            const content = card.querySelector(".card-content");
+            const year = card.querySelector(".card-year");
             const image = card.querySelector(".card-image");
             const frame = card.querySelector(".card-frame");
             const parallax = card.querySelector(".card-parallax");
@@ -51,7 +52,7 @@ export function DriverSection({ driver, chapter }: { driver: Driver; chapter: nu
                 // Destaque do card enquanto ele cruza o centro da tela
                 onToggle: ({ isActive }) => {
                     if (dot) gsap.to(dot, { scale: isActive ? 1.6 : 1, duration: 0.3, ease: "back.out(2)", overwrite: "auto" });
-                    if (content) gsap.to(content, { scale: isActive ? 1.03 : 1, borderColor: isActive ? ACTIVE_BORDER : IDLE_BORDER, duration: 0.3, overwrite: "auto" });
+                    if (year) gsap.to(year, { "--year-stroke": isActive ? ACTIVE_STROKE : IDLE_STROKE, duration: 0.4, overwrite: "auto" });
                 },
                 // A imagem ganha cor ao ser alcançada e só volta ao P&B se o usuário subir acima dela
                 onEnter: () => setColor(true),
@@ -84,25 +85,43 @@ export function DriverSection({ driver, chapter }: { driver: Driver; chapter: nu
             });
         });
 
+        // Barrinhas de "setor" da faixa de números se preenchem ao aparecer
+        const bars = sectionRef.current?.querySelectorAll(".stat-bar");
+        if (bars?.length) {
+            gsap.from(bars, {
+                scrollTrigger: { trigger: bars[0], start: "top 85%" },
+                scaleX: 0,
+                duration: 1.2,
+                stagger: 0.1,
+                ease: "power3.out",
+            });
+        }
+
         return () => mm.revert();
     }, { scope: sectionRef });
 
     const ns = driver.id;
+    const chapterNumber = String(chapter).padStart(2, "0");
+    const titlesNote = driver.titlesNote ? t(`${ns}.titlesNote`) : undefined;
 
     return (
         <section id={`${driver.id}-section`} ref={sectionRef} className="relative w-full text-zinc-900">
             <ProfileCard
-                chapter={String(chapter).padStart(2, "0")}
-                label={t(`${ns}.label`)}
+                chapter={chapterNumber}
+                label={`${t("ui.chapter")} ${chapterNumber} · ${t(`${ns}.label`)}`}
                 firstName={driver.firstName}
                 lastName={driver.lastName}
                 nickname={t(`${ns}.nickname`)}
                 imageSrc={driver.profileImage}
-                titles={driver.titles}
-                wins={wins}
-                titlesLabel={t("ui.titles")}
-                winsLabel={t("ui.wins")}
-                titlesNote={driver.titlesNote ? t(`${ns}.titlesNote`) : undefined}
+                era={driver.era}
+                teams={driver.teams}
+                stats={[
+                    { label: t("ui.titles"), value: driver.titles, suffix: titlesNote ? "*" : "" },
+                    { label: t("ui.wins"), value: wins, live: true },
+                    { label: t("ui.podiums"), value: driver.podiums },
+                    { label: t("ui.poles"), value: driver.poles },
+                ]}
+                note={titlesNote}
             />
 
             <div className="space-y-16 md:space-y-32 pb-32">
@@ -114,6 +133,7 @@ export function DriverSection({ driver, chapter }: { driver: Driver; chapter: nu
                         title={t(`${ns}.${card.key}.title`)}
                         text={t(`${ns}.${card.key}.text`)}
                         imageSrc={card.image}
+                        index={`${String(index + 1).padStart(2, "0")} / ${String(driver.cards.length).padStart(2, "0")}`}
                     />
                 ))}
             </div>

@@ -8,12 +8,13 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 interface CountUpProps {
   value: number;
+  prefix?: string;
   suffix?: string;
   className?: string;
 }
 
 /** Conta de 0 até `value` quando entra na tela. Se o valor mudar depois (ex.: resposta da API), anima até o novo. */
-export function CountUp({ value, suffix = "", className }: CountUpProps) {
+export function CountUp({ value, prefix = "", suffix = "", className }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const counter = useRef({ n: 0 });
 
@@ -24,15 +25,15 @@ export function CountUp({ value, suffix = "", className }: CountUpProps) {
       ease: "power2.out",
       overwrite: true,
       onUpdate: () => {
-        if (ref.current) ref.current.textContent = `${Math.round(counter.current.n)}${suffix}`;
+        if (ref.current) ref.current.textContent = `${prefix}${Math.round(counter.current.n)}${suffix}`;
       },
       scrollTrigger: { trigger: ref.current, start: "top 85%", once: true },
     });
-  }, { dependencies: [value, suffix] });
+  }, { dependencies: [value, prefix, suffix] });
 
   return (
     <span ref={ref} className={className}>
-      {value}{suffix}
+      {prefix}{value}{suffix}
     </span>
   );
 }

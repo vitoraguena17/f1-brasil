@@ -4,6 +4,10 @@
 /* Ativada pelo DriversTimeline enquanto a seção do legado do Senna está na tela */
 @custom-variant theme-dark (&:where(.theme-dark, .theme-dark *));
 
+/* Ativada junto com theme-dark pelo capítulo "Agora": o header assume o azul da corrida noturna.
+   Declarada depois de theme-dark para vencer quando as duas estão ativas */
+@custom-variant theme-night (&:where(.theme-night, .theme-night *));
+
 @theme inline {
   --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   --font-cursive: var(--font-playfair), Georgia, serif;
